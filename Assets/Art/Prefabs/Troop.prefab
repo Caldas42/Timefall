@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806466831470492260}
   m_Layer: 0
-  m_Name: RotationPoint
+  m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2332228563717279280}
   - component: {fileID: 4907959507921118816}
   m_Layer: 0
-  m_Name: atirador
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 5810214309050244863}
   - component: {fileID: 4418764785776404828}
   m_Layer: 0
-  m_Name: Torre
+  m_Name: Troop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2494705216108256235}
   - component: {fileID: 4486281130879088291}
   m_Layer: 0
-  m_Name: base
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
