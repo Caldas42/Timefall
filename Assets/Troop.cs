@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEditor;
 using Unity.VisualScripting;
 
-public class Torre : MonoBehaviour
+public class Troop : MonoBehaviour
 {
 
     [Header("References")]
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
 
-    [Header("Atrtribute")]
+    [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
 
