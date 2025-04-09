@@ -19,7 +19,15 @@ public class Plot : MonoBehaviour{
     private void OnMouseDown(){
       if(Troop != null) return;
 
-    GameObject TroopToBuild = BuildManager.main.GetSelectedTroop();
-    Troop = Instantiate(TroopToBuild, transform.position, Quaternion.identity);
+    Tower TroopToBuild = BuildManager.main.GetSelectedTroop();
+
+    if(TroopToBuild.cost > LevelManager.main.currency){
+      Debug.Log("YOu can't afford this tower");
+      return;
+    }
+
+    LevelManager.main.SpendCurrency(TroopToBuild.cost);
+
+    Troop = Instantiate(TroopToBuild.prefab, transform.position, Quaternion.identity);
     }
 }

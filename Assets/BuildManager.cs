@@ -3,14 +3,19 @@ public class BuildManager : MonoBehaviour{
     public static BuildManager main;
     [Header("References")]
 
-    [SerializeField] private GameObject[] troopPrefabs ;
+
+    [SerializeField] private Tower[] towers;
 
     private int selectedtroop = 0;
     private void Awake() {
         main = this;
     }   
-   public GameObject GetSelectedTroop(){
-        return troopPrefabs[selectedtroop];
-   }     
+   public Tower GetSelectedTroop(){
+        return towers[selectedtroop];
+   }   
+
+   public void SetSelectedTower(int _selectedTower) {
+        selectedtroop = _selectedTower;
+   } 
 }
 
