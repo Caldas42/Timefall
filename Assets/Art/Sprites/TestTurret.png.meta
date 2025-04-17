@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: torre_sprite_01_teste_0
+      name: TestTurret_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,7 +111,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 9
-      pivot: {x: 0.49211282, y: 0.5591541}
+      pivot: {x: 0.50156564, y: 0.54339916}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: torre_sprite_01_teste_1
+      name: TestTurret_1
       rect:
         serializedVersion: 2
         x: 14
@@ -160,8 +160,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      torre_sprite_01_teste_0: 2194875353063524114
-      torre_sprite_01_teste_1: -5002893407552877993
+      Test turret_0: -680605624
+      TestTurret_0: 2194875353063524114
+      TestTurret_1: -5002893407552877993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
