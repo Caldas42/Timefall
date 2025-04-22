@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using Unity.VisualScripting;
 
-public class Troop : MonoBehaviour
+public class Turret : MonoBehaviour
 {
 
     [Header("References")]

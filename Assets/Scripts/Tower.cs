@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class Tower 
+public class Tower
 {
     public string name;
     public int cost;
