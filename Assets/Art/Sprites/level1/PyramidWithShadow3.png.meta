@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PyramidWithShadow3_0: 2719023623169147704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
