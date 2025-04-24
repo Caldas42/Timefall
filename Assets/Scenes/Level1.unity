@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 174803769}
   - component: {fileID: 174803768}
   m_Layer: 0
-  m_Name: level1Floor_1
+  m_Name: Floor Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
