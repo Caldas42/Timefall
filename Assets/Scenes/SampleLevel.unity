@@ -2432,6 +2432,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
   m_PrefabInstance: {fileID: 622596556}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &518061108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_Name
+      value: AreaTroop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
 --- !u!4 &523263514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
@@ -3186,10 +3243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 6587219627160654117, guid: fec414e4f02064944af369089cf97e47, type: 3}
-  baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
-  difficultyScalingFactor: 0.75
 --- !u!114 &618250662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3261,7 @@ MonoBehaviour:
   - name: Basic Turret
     cost: 100
     prefab: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
-  - name: Test Turret
+  - name: Area Turret
     cost: 150
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
 --- !u!1001 &622596556
@@ -10930,6 +10985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5810214309050244863, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10985,5 +11044,6 @@ SceneRoots:
   - {fileID: 312389493}
   - {fileID: 694697350}
   - {fileID: 2127347196618793576}
+  - {fileID: 518061108}
   - {fileID: 1595938874}
   - {fileID: 809366953}

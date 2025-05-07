@@ -15,17 +15,15 @@ public class Bullet : MonoBehaviour
         target = _target;
     }
 
+    protected float getBulletDamage() {
+        return bulletDamage;
+    }
+
     private void FixedUpdate()
     {
         if(target) { 
             Vector2 direction = (target.position - transform.position).normalized;
             rb.linearVelocity = direction * bulletSpeed;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
-        Destroy(gameObject);
     }
 }
