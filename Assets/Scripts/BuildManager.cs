@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour{
     private int selectedtroop = 0;
 
     private void Awake() {
-        main = this;
+        main = this; 
     }
 
    public Tower GetSelectedTroop(){
