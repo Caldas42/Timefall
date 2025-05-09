@@ -6627,7 +6627,9 @@ MonoBehaviour:
   - {fileID: 1944803361}
   - {fileID: 2136635482}
   - {fileID: 1852464392}
+  livesText: {fileID: 0}
   currency: 100
+  remainingLives: 0
 --- !u!114 &618250661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7326,6 +7328,10 @@ PrefabInstance:
     - target: {fileID: 8251806774484142926, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
       propertyPath: m_Name
       value: Plot (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323342645561043127, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
+      propertyPath: isColocavel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14299,6 +14305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 545488126}
+  remainingLivesUI: {fileID: 0}
   anim: {fileID: 1378895372}
 --- !u!95 &1378895372
 Animator:
@@ -16598,6 +16605,10 @@ PrefabInstance:
     - target: {fileID: 8251806774484142926, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
       propertyPath: m_Name
       value: Plot (381)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323342645561043127, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
+      propertyPath: isPlaceable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19824,6 +19835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (375)
       objectReference: {fileID: 0}
+    - target: {fileID: 8323342645561043127, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
+      propertyPath: isColocavel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20652,6 +20667,10 @@ PrefabInstance:
     - target: {fileID: 8251806774484142926, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
       propertyPath: m_Name
       value: Plot (385)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323342645561043127, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
+      propertyPath: isColocavel
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
