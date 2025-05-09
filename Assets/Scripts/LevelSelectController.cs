@@ -6,6 +6,6 @@ public class LevelSelectController : MonoBehaviour
 {
     public void StartLevel1()
     {
-        SceneManager.LoadScene("SampleLevel");
+        SceneManager.LoadScene("Level1");
     }
 }
