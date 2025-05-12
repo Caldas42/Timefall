@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
     [SerializeField] private float enemiesPerSecond = 0.25f;  // Quantos inimigos serão spawnados por segundo
     [SerializeField] private float timeBetweenWaves = 5f;     // Tempo entre as waves
 
+    [SerializeField] private int maxWaves = 20;  // Número máximo de waves
+
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();  // Evento chamado quando um inimigo é destruído
 
@@ -21,6 +23,11 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
 
     private List<int> enemiesToSpawn = new List<int>(); // Lista com os tipos de inimigos a serem spawnados
     private int totalEnemiesAlive;              // Contador de inimigos vivos na cena
+
+    // Contadores de inimigos por tipo (aumentam com o tempo)
+    private int normalEnemyCount = 10;
+    private int fastEnemyCount = 10;
+    private int tankEnemyCount = 12;
 
     private void Awake()
     {
@@ -86,12 +93,18 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
     // Desativa o spawn atual
     private void EndWave()
     {
-        isSpawning = false;      
-        // Reinicia tempo desde último spawn
-        timeSinceLastSpawn = 0f;    
-        // Avança para a próxima wave
-        currentWave++;              
-        StartCoroutine(StartWave()); // Começa nova wave com intervalo
+        isSpawning = false;
+        //Reinicia tempo desde último spawn
+        timeSinceLastSpawn = 0f;
+
+        if (currentWave >= maxWaves)
+        {
+            Debug.Log("Todas as waves concluídas. Fim do spawn de inimigos.");
+            return; // Não inicia mais waves
+        }
+    //Avança para o próximo wave
+    currentWave++;
+    StartCoroutine(StartWave()); //começa nova wave com intervalo
     }
 
     private void SetupWave(int wave)
@@ -119,10 +132,15 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
                 Shuffle(enemiesToSpawn);
                 break;
             default:
-                // A partir da wave 4: mais inimigos de todos os tipos
-                for (int i = 0; i < 10; i++) enemiesToSpawn.Add(0);
-                for (int i = 0; i < 10; i++) enemiesToSpawn.Add(1);
-                for (int i = 0; i < 12; i++) enemiesToSpawn.Add(2);
+                // Aumenta os valores com base na wave atual
+                int extra = wave - 3; // começa a aumentar a partir da wave 4
+                int normalCount = normalEnemyCount + extra * 2;
+                int fastCount = fastEnemyCount + extra * 2;
+                int tankCount = tankEnemyCount + extra * 2;
+
+                for (int i = 0; i < normalCount; i++) enemiesToSpawn.Add(0);
+                for (int i = 0; i < fastCount; i++) enemiesToSpawn.Add(1);
+                for (int i = 0; i < tankCount; i++) enemiesToSpawn.Add(2);
                 Shuffle(enemiesToSpawn);
                 break;
         }

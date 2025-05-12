@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
    public static LevelManager main;
-
    public Transform startPoint;
    public Transform[] path;
+   public TMP_Text livesText;
 
    public int currency; 
+   public int remainingLives;
 
     private void Awake()
     {
@@ -17,6 +20,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currency = 100;
+        remainingLives = 10;
     }
 
     public void IncreaseCurrency(int amount){
@@ -32,4 +36,20 @@ public class LevelManager : MonoBehaviour
             return false;
         }
     }
+
+    public void DamagePlayer(int amount){
+
+        remainingLives -= amount;
+
+        if (remainingLives <= 0)
+        {
+            GameOver();
+        }
+
+    }
+
+    private void GameOver(){
+        SceneManager.LoadScene("GameOver");
+    }
+
 }
