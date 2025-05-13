@@ -4378,8 +4378,6 @@ GameObject:
   - component: {fileID: 394161965}
   - component: {fileID: 394161964}
   - component: {fileID: 394161963}
-  - component: {fileID: 394161967}
-  - component: {fileID: 394161968}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4505,32 +4503,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &394161967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394161962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0690c3a73412a42813f17f49513cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetAspect: 3
---- !u!114 &394161968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394161962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf78acb7dcab33d4cb9fdcd68f05ae0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetAspect: 1.7777778
 --- !u!4 &406414922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
@@ -6540,6 +6512,7 @@ MonoBehaviour:
   - {fileID: 6587219627160654117, guid: 26b3eb13e538e0b4bb4d477c178ea67f, type: 3}
   enemiesPerSecond: 0.5
   timeBetweenWaves: 1
+  maxWaves: 20
 --- !u!114 &618250662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6557,8 +6530,11 @@ MonoBehaviour:
     cost: 100
     prefab: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
   - name: Area Turret
-    cost: 150
+    cost: 100
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+  - name: Fire Turret
+    cost: 100
+    prefab: {fileID: 5238912390334813594, guid: afe8140c5f55a5949ab969c94175106e, type: 3}
 --- !u!4 &628536584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
@@ -14115,7 +14091,6 @@ GameObject:
   - component: {fileID: 1378895370}
   - component: {fileID: 1378895369}
   - component: {fileID: 1378895371}
-  - component: {fileID: 1378895372}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -14197,28 +14172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 545488126}
   remainingLivesUI: {fileID: 0}
---- !u!95 &1378895372
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378895367}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bb8e16875ca770e43992f2e92bfda584, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1380571181
 GameObject:
   m_ObjectHideFlags: 0

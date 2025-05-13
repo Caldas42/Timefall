@@ -14,7 +14,4 @@ public class Menu : MonoBehaviour
         remainingLivesUI.text = "Lives remaining: " + LevelManager.main.remainingLives.ToString();
     }
 
-    public void SetSelected(){
-
-    }
 }
