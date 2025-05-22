@@ -5,13 +5,13 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject settingsPanel;
 
-    public void OpenSettings()
+    public void OpenSettingsPanel()
     {
         settingsPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void CloseSettings()
+    public void CloseSettingsPanel()
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f;

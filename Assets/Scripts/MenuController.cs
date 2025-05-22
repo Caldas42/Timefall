@@ -7,5 +7,9 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+    public void OpenSettings()
+    {
+        //SceneManager.LoadScene("Settings");
+    }
 
 }
