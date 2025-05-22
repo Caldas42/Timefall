@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tilted Tree_0: 4276144631493033218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
