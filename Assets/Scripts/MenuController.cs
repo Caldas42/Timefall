@@ -12,4 +12,13 @@ public class MenuController : MonoBehaviour
         //SceneManager.LoadScene("Settings");
     }
 
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void StartLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }
