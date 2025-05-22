@@ -11,16 +11,17 @@ public class LevelManager : MonoBehaviour
 
    public int currency; 
    public int remainingLives;
+   [SerializeField] private UIManager uIManager;
 
     private void Awake()
     {
-        main = this;   
+        main = this;
     }
 
     private void Start()
     {
         currency = 100;
-        remainingLives = 10;
+        remainingLives = 5;
     }
 
     public void IncreaseCurrency(int amount){
@@ -43,13 +44,8 @@ public class LevelManager : MonoBehaviour
 
         if (remainingLives <= 0)
         {
-            GameOver();
+            uIManager.OpenGameOverPanel();
         }
 
     }
-
-    private void GameOver(){
-        SceneManager.LoadScene("GameOver");
-    }
-
 }

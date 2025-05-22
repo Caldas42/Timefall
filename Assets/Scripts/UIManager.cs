@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject gameOverPanel;
 
     public void OpenSettingsPanel()
     {
@@ -21,5 +22,17 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void OpenGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level1");
     }
 }
