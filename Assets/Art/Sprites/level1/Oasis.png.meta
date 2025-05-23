@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Oasis_0: 3112457601230600914
+      Oasis_1: 4115559668546923256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
     [SerializeField] private float enemiesPerSecond = 0.25f;  // Quantos inimigos serão spawnados por segundo
     [SerializeField] private float timeBetweenWaves = 5f;     // Tempo entre as waves
 
-    [SerializeField] private int maxWaves = 20;  // Número máximo de waves
+    [SerializeField] private int maxWaves = 10;  // Número máximo de waves
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();  // Evento chamado quando um inimigo é destruído
@@ -130,6 +130,9 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(1);
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(2);
                 Shuffle(enemiesToSpawn);
+                break;
+            case 10:
+                enemiesToSpawn.Add(3);
                 break;
             default:
                 // Aumenta os valores com base na wave atual
