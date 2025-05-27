@@ -5813,7 +5813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1301498483}
-  gameOverPanel: {fileID: 0}
+  gameOverPanel: {fileID: 924977283}
 --- !u!4 &628536584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
