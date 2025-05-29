@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sound&Light_0: 1368088588971513886
+      Sound&Light_1: 4545091778688886497
+      Sound&Light_10: 7732835037363738397
+      Sound&Light_11: 1017303071526155626
+      Sound&Light_2: 9149055313398409087
+      Sound&Light_3: 6819513037635632902
+      Sound&Light_4: 6956511695970929360
+      Sound&Light_5: 6487582943931945185
+      Sound&Light_6: 7291359631000089382
+      Sound&Light_7: -1384509579724629987
+      Sound&Light_8: -3304956731480762886
+      Sound&Light_9: -8360493459514248598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

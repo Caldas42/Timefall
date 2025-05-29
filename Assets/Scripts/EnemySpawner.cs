@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de inimigos
 {
@@ -16,6 +17,9 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();  // Evento chamado quando um inimigo é destruído
+
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI waveCounter;
 
     private int currentWave = 1;                // Número da wave atual
     private float timeSinceLastSpawn;           // Tempo desde o último inimigo spawnado
@@ -47,7 +51,7 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         if (!isSpawning) return;
 
         // Incrementa tempo desde o último spawn
-        timeSinceLastSpawn += Time.deltaTime; 
+        timeSinceLastSpawn += Time.deltaTime;
 
         // Se passou o tempo suficiente, tenta spawnar um inimigo
         if (timeSinceLastSpawn >= (1f / enemiesPerSecond))
@@ -56,7 +60,7 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
             if (spawned)
             {
                 // Reinicia o contador de tempo
-                timeSinceLastSpawn = 0f;    
+                timeSinceLastSpawn = 0f;
             }
         }
 
@@ -85,9 +89,10 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         }
 
         // Ativa o spawn
-        isSpawning = true; 
+        isSpawning = true;
         // Prepara a wave com base no número atual que está
-        SetupWave(currentWave); 
+        SetupWave(currentWave);
+        UpdateWaveUI();
     }
 
     // Desativa o spawn atual
@@ -100,17 +105,19 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         if (currentWave >= maxWaves)
         {
             Debug.Log("Todas as waves concluídas. Fim do spawn de inimigos.");
+            UpdateWaveUI();
             return; // Não inicia mais waves
         }
-    //Avança para o próximo wave
-    currentWave++;
-    StartCoroutine(StartWave()); //começa nova wave com intervalo
+        //Avança para o próximo wave
+        currentWave++;
+        UpdateWaveUI();
+        StartCoroutine(StartWave()); //começa nova wave com intervalo
     }
 
     private void SetupWave(int wave)
     {
         // Limpa lista de inimigos anteriores
-        enemiesToSpawn.Clear(); 
+        enemiesToSpawn.Clear();
 
         switch (wave)
         {
@@ -159,7 +166,7 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         // Pega o tipo do próximo inimigo
         int enemyType = enemiesToSpawn[0];
         // Remove ele da lista     
-        enemiesToSpawn.RemoveAt(0);                  
+        enemiesToSpawn.RemoveAt(0);
 
         Spawn(enemyPrefabs[enemyType]);              // Instancia o inimigo usando o prefab correspondente
         return true;
@@ -177,11 +184,17 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         for (int i = 0; i < list.Count; i++)
         {
             // Gera índice aleatório
-            int randomIndex = Random.Range(i, list.Count); 
+            int randomIndex = Random.Range(i, list.Count);
             // Troca os elementos
-            int temp = list[i];                            
+            int temp = list[i];
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
         }
+    }
+
+    // faz update de texto da wave
+    private void UpdateWaveUI()
+    {
+        waveCounter.text = "Waves Remaining: " + currentWave + "/ " + maxWaves;
     }
 }
