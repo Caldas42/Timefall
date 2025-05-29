@@ -8,9 +8,14 @@ public class Health : MonoBehaviour
 
     private float burnTimeRemaining = 0f;
     private float burnDPS = 0f;
+    private bool isDead = false;
+
+    public bool IsBurning => burnTimeRemaining > 0f;
 
     private void Update()
     {
+        if (isDead) return;
+
         if (burnTimeRemaining > 0f)
         {
             TakeDamage(burnDPS * Time.deltaTime);
@@ -20,10 +25,13 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        if (isDead) return;
+
         hitPoints -= dmg;
 
         if (hitPoints <= 0)
         {
+            isDead = true;
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             Destroy(gameObject);
@@ -32,8 +40,12 @@ public class Health : MonoBehaviour
 
     public void ApplyBurn(float dps, float duration)
     {
-        burnDPS = dps;
-        burnTimeRemaining = duration;
+        if (burnTimeRemaining <= 0f)
+        {
+            burnDPS = dps;
+            burnTimeRemaining = duration;
+        }
     }
 }
+
 
