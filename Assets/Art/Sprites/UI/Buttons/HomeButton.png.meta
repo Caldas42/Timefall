@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HomeButton_0: -5601767544888516966
+      HomeButton_1: -3511734618376968860
+      HomeButton_2: -608817422105022148
+      HomeButton_3: 7781561926217677707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
