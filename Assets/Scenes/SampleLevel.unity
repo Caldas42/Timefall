@@ -2444,6 +2444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaTroop
       objectReference: {fileID: 0}
+    - target: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5964,6 +5968,10 @@ PrefabInstance:
     - target: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
       propertyPath: m_Name
       value: BurnTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
       propertyPath: m_LocalPosition.x
