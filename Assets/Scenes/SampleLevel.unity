@@ -3138,7 +3138,7 @@ MonoBehaviour:
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
   - name: Burn Turret
     cost: 75
-    prefab: {fileID: 1204465184}
+    prefab: {fileID: 0}
 --- !u!1001 &622596556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5971,7 +5971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5810214309050244863, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6018,11 +6018,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
---- !u!1 &1204465184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
-  m_PrefabInstance: {fileID: 1204465183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1211347640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}

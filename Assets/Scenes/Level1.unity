@@ -9169,7 +9169,7 @@ MonoBehaviour:
   - {fileID: 1852464392}
   livesText: {fileID: 0}
   currency: 100
-  remainingLives: 5
+  remainingLives: 20
   uIManager: {fileID: 618250663}
 --- !u!114 &618250661
 MonoBehaviour:
@@ -9205,13 +9205,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - name: Archer Tower
-    cost: 100
+    cost: 50
     prefab: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
   - name: Catapult
     cost: 100
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
   - name: Fire Jar
-    cost: 100
+    cost: 150
     prefab: {fileID: 5238912390334813594, guid: afe8140c5f55a5949ab969c94175106e, type: 3}
 --- !u!114 &618250663
 MonoBehaviour:
@@ -9240,7 +9240,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 7695a74429a81fb40981f21496dd3cf0, type: 3}
   m_Resource: {fileID: 8300000, guid: 7695a74429a81fb40981f21496dd3cf0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -167,8 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7986890656552793513}
   bulletSpeed: 4
-  bulletDamage: 2
-  explosionRadius: 1.5
+  bulletDamage: 50
+  explosionRadius: 2
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
