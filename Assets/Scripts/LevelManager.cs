@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour
    public static LevelManager main;
    public Transform startPoint;
    public Transform[] path;
-   public TMP_Text livesText;
 
    public int currency = 100; 
    public int remainingLives =  20;

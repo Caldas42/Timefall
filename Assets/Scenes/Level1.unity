@@ -9376,7 +9376,7 @@ MonoBehaviour:
   - {fileID: 579759321}
   - {fileID: 193794002}
   - {fileID: 1852464392}
-  livesText: {fileID: 0}
+  livesText: {fileID: 301675114}
   currency: 100
   remainingLives: 20
   uIManager: {fileID: 618250663}
