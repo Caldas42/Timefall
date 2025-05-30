@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: ff5dfed2babfcb94aab337465af85f5a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8640767807254934274
+    second: Voceperdeu_0
+  - first:
+      213: -930838660473972056
+    second: Voceperdeu_1
+  - first:
+      213: -2855980301066362036
+    second: Voceperdeu_2
+  - first:
+      213: -874835826055073866
+    second: Voceperdeu_3
+  - first:
+      213: 7099732447998064774
+    second: Voceperdeu_4
+  - first:
+      213: -5635766894087644705
+    second: Voceperdeu_5
+  - first:
+      213: -6970178166356239782
+    second: Voceperdeu_6
+  - first:
+      213: 4465054645867582996
+    second: Voceperdeu_7
+  - first:
+      213: 1316333432559105310
+    second: Voceperdeu_8
+  - first:
+      213: -9175599238833406915
+    second: Voceperdeu_9
+  - first:
+      213: 8480001956480918692
+    second: Voceperdeu_10
+  - first:
+      213: 5212242817846317743
+    second: Voceperdeu_11
+  - first:
+      213: 5800076396008031402
+    second: Voceperdeu_12
+  - first:
+      213: -467104052429307272
+    second: Voceperdeu_13
+  - first:
+      213: -8086040901189073727
+    second: Voceperdeu_14
+  - first:
+      213: -6053324169673443936
+    second: Voceperdeu_15
+  - first:
+      213: 3812673995814874342
+    second: Voceperdeu_16
+  - first:
+      213: 4103365975285054467
+    second: Voceperdeu_17
+  - first:
+      213: 8860424253571911454
+    second: Voceperdeu_18
+  - first:
+      213: 4690254697013223582
+    second: Voceperdeu_19
+  - first:
+      213: -8253445294285281865
+    second: Voceperdeu_20
+  - first:
+      213: -9097068086444915383
+    second: Voceperdeu_21
+  - first:
+      213: 3581287974430767878
+    second: Voceperdeu_22
+  - first:
+      213: 7066826183908719589
+    second: Voceperdeu_23
+  - first:
+      213: -6982896115116114836
+    second: Voceperdeu_24
+  - first:
+      213: 3996646620636744063
+    second: Voceperdeu_25
+  - first:
+      213: -841636041452367362
+    second: Voceperdeu_26
+  - first:
+      213: 7998886030745409655
+    second: Voceperdeu_27
+  - first:
+      213: 3608384052804646974
+    second: Voceperdeu_28
+  - first:
+      213: 4465280519050798951
+    second: Voceperdeu_29
+  - first:
+      213: -4907678880553198421
+    second: Voceperdeu_30
+  - first:
+      213: 2392882156736739645
+    second: Voceperdeu_31
+  - first:
+      213: -5795000775046072852
+    second: Voceperdeu_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Voceperdeu_0
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 935
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc40f5c573d51880800000000000000
+      internalID: -8640767807254934274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 815
+        width: 90
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa9f3b8b2ff413f0800000000000000
+      internalID: -930838660473972056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 815
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c432d6d3c058d58d0800000000000000
+      internalID: -2855980301066362036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_3
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 815
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfa3378375fbd3f0800000000000000
+      internalID: -874835826055073866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_4
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 815
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6883d33ab01578260800000000000000
+      internalID: 7099732447998064774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_5
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9dff09edbb9c1b0800000000000000
+      internalID: -5635766894087644705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a172523e3f44f90800000000000000
+      internalID: -6970178166356239782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41615a52b8f07fd30800000000000000
+      internalID: 4465054645867582996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_8
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15f7ad584e844210800000000000000
+      internalID: 1316333432559105310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c7dff4b19b9a080800000000000000
+      internalID: -9175599238833406915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_10
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 687
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4a9a6b9d40fa570800000000000000
+      internalID: 8480001956480918692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_11
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 591
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa29fc82a3b955840800000000000000
+      internalID: 5212242817846317743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 471
+        width: 90
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4cf2680c20e7050800000000000000
+      internalID: 5800076396008031402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_13
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 471
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8724ec1d6538489f0800000000000000
+      internalID: -467104052429307272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_14
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 471
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4885d54ac98cf80800000000000000
+      internalID: -8086040901189073727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_15
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 471
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5f3545db54efba0800000000000000
+      internalID: -6053324169673443936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_16
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec2aec7cc659e430800000000000000
+      internalID: 3812673995814874342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_17
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c3a4c2d9512f830800000000000000
+      internalID: 4103365975285054467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_18
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fc8610aec86fa70800000000000000
+      internalID: 8860424253571911454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_19
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90a4910cc1271140800000000000000
+      internalID: 4690254697013223582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_20
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5a105cb3fd57d80800000000000000
+      internalID: -8253445294285281865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_21
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 343
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94588e116c8b0c180800000000000000
+      internalID: -9097068086444915383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_22
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 287
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bf252307a43b130800000000000000
+      internalID: 3581287974430767878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_23
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 167
+        width: 90
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebfe4df8f8621260800000000000000
+      internalID: 7066826183908719589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_24
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 167
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c7c03faf4c71f90800000000000000
+      internalID: -6982896115116114836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_25
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 167
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7981d32de0f67730800000000000000
+      internalID: 3996646620636744063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_26
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 167
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1d01fba78e154f0800000000000000
+      internalID: -841636041452367362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_27
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7781a6d0770c10f60800000000000000
+      internalID: 7998886030745409655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_28
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38fa909d2e831230800000000000000
+      internalID: 3608384052804646974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_29
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767ae7859fcd7fd30800000000000000
+      internalID: 4465280519050798951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_30
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac90f46f0c64ebb0800000000000000
+      internalID: -4907678880553198421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_31
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39f9adb4a9353120800000000000000
+      internalID: 2392882156736739645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voceperdeu_32
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 39
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5f3429f75049fa0800000000000000
+      internalID: -5795000775046072852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Voceperdeu_0: -8640767807254934274
+      Voceperdeu_1: -930838660473972056
+      Voceperdeu_10: 8480001956480918692
+      Voceperdeu_11: 5212242817846317743
+      Voceperdeu_12: 5800076396008031402
+      Voceperdeu_13: -467104052429307272
+      Voceperdeu_14: -8086040901189073727
+      Voceperdeu_15: -6053324169673443936
+      Voceperdeu_16: 3812673995814874342
+      Voceperdeu_17: 4103365975285054467
+      Voceperdeu_18: 8860424253571911454
+      Voceperdeu_19: 4690254697013223582
+      Voceperdeu_2: -2855980301066362036
+      Voceperdeu_20: -8253445294285281865
+      Voceperdeu_21: -9097068086444915383
+      Voceperdeu_22: 3581287974430767878
+      Voceperdeu_23: 7066826183908719589
+      Voceperdeu_24: -6982896115116114836
+      Voceperdeu_25: 3996646620636744063
+      Voceperdeu_26: -841636041452367362
+      Voceperdeu_27: 7998886030745409655
+      Voceperdeu_28: 3608384052804646974
+      Voceperdeu_29: 4465280519050798951
+      Voceperdeu_3: -874835826055073866
+      Voceperdeu_30: -4907678880553198421
+      Voceperdeu_31: 2392882156736739645
+      Voceperdeu_32: -5795000775046072852
+      Voceperdeu_4: 7099732447998064774
+      Voceperdeu_5: -5635766894087644705
+      Voceperdeu_6: -6970178166356239782
+      Voceperdeu_7: 4465054645867582996
+      Voceperdeu_8: 1316333432559105310
+      Voceperdeu_9: -9175599238833406915
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
