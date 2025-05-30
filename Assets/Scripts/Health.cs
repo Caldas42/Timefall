@@ -3,8 +3,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] private float hitPoints = 2;
-    [SerializeField] private int currencyWorth = 50;
+    [SerializeField] private float hitPoints = 200;
+    [SerializeField] private int currencyWorth = 10;
 
     private float burnTimeRemaining = 0f;
     private float burnDPS = 0f;

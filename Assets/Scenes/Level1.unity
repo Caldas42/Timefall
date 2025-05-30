@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 62369115}
   - component: {fileID: 62369114}
   m_Layer: 5
-  m_Name: Fire Troop
+  m_Name: FireButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2458,7 +2458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 460, y: 400}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &148138811
@@ -4741,9 +4741,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171.964, y: 490}
-  m_SizeDelta: {x: 443.928, y: 52.531}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -102, y: -11}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &301675114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4764,7 +4764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lives Remaining:'
+  m_text: 'Vidas:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7127,7 +7127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 660, y: 470}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &469793788
@@ -9398,9 +9398,9 @@ MonoBehaviour:
   - {fileID: 6587219627160654117, guid: 26b3eb13e538e0b4bb4d477c178ea67f, type: 3}
   - {fileID: 6587219627160654117, guid: 930f9a98d744663469a605a4231b839c, type: 3}
   enemiesPerSecond: 0.5
-  timeBetweenWaves: 1
+  timeBetweenWaves: 3
   maxWaves: 10
-  waveCounter: {fileID: 0}
+  waveCounter: {fileID: 752880931}
 --- !u!114 &618250662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11507,8 +11507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 438}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752880931
 MonoBehaviour:
@@ -11530,7 +11530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Waves Remaining: 1/10'
+  m_text: 'Rodada: 1/10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14356,7 +14356,7 @@ GameObject:
   - component: {fileID: 930999154}
   - component: {fileID: 930999153}
   m_Layer: 5
-  m_Name: Area Troop
+  m_Name: CatapultButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14485,8 +14485,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 934825515}
-  - component: {fileID: 934825517}
-  - component: {fileID: 934825516}
   m_Layer: 5
   m_Name: Displays
   m_TagString: Untagged
@@ -14515,37 +14513,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &934825516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934825514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ed8f19d4318e84da2dfec3a2cb05b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs: []
-  enemiesPerSecond: 0.25
-  timeBetweenWaves: 5
-  maxWaves: 10
-  waveCounter: {fileID: 752880931}
---- !u!114 &934825517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934825514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf3cd5c4338ba7446aa12541ccd96b1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currencyUI: {fileID: 0}
-  remainingLivesUI: {fileID: 0}
 --- !u!1001 &935612057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20311,7 +20278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 545488126}
-  remainingLivesUI: {fileID: 0}
+  remainingLivesUI: {fileID: 301675114}
 --- !u!1001 &1382370671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22804,7 +22771,7 @@ GameObject:
   - component: {fileID: 1561916290}
   - component: {fileID: 1561916289}
   m_Layer: 5
-  m_Name: Basic Troop
+  m_Name: ArcherButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31138,7 +31105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Troops
+  m_text: Tropas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

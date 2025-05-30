@@ -195,6 +195,6 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
     // faz update de texto da wave
     private void UpdateWaveUI()
     {
-        waveCounter.text = "Waves Remaining: " + currentWave + "/ " + maxWaves;
+        waveCounter.text = "Rodada: " + currentWave + "/" + maxWaves;
     }
 }

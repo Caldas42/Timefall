@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BurnBullet : Bullet
 {
-    [SerializeField] private float burnDuration = 3f;
-    [SerializeField] private float burnDamagePerSecond = 1f;
+    [SerializeField] private float burnDuration = 4f;
+    [SerializeField] private float burnDamagePerSecond = 5f;
     [SerializeField] private GameObject fireEffectPrefab;
 
     private void OnCollisionEnter2D(Collision2D other)

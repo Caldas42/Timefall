@@ -9,19 +9,13 @@ public class LevelManager : MonoBehaviour
    public Transform[] path;
    public TMP_Text livesText;
 
-   public int currency; 
-   public int remainingLives;
+   public int currency = 100; 
+   public int remainingLives =  20;
    [SerializeField] private UIManager uIManager;
 
     private void Awake()
     {
         main = this;
-    }
-
-    private void Start()
-    {
-        currency = 100;
-        remainingLives = 5;
     }
 
     public void IncreaseCurrency(int amount){
