@@ -14545,7 +14545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 0}
-  remainingLivesUI: {fileID: 301675114}
+  remainingLivesUI: {fileID: 0}
 --- !u!1001 &935612057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20311,7 +20311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 545488126}
-  remainingLivesUI: {fileID: 301675114}
+  remainingLivesUI: {fileID: 0}
 --- !u!1001 &1382370671
 PrefabInstance:
   m_ObjectHideFlags: 0
