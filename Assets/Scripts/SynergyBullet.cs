@@ -5,8 +5,8 @@ public class SynergyBullet : Bullet
     [SerializeField] private float explosionRadius = 2f;
     [SerializeField] private LayerMask enemyMask;
 
-    [SerializeField] private float synergyBurnDuration = 3f;
-    [SerializeField] private float synergyBurnDamagePerSecond = 1f;
+    [SerializeField] private float synergyBurnDuration = 4f;
+    [SerializeField] private float synergyBurnDamagePerSecond = 5f;
     [SerializeField] private GameObject fireEffectPrefab;
 
     private void OnCollisionEnter2D(Collision2D other)

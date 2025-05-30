@@ -173,5 +173,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   synergyBurnDuration: 4
-  synergyBurnDamagePerSecond: 1
+  synergyBurnDamagePerSecond: 5
   fireEffectPrefab: {fileID: 7140541241482650039, guid: 183a306b1429e984f952a4422ae99dfc, type: 3}

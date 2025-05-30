@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class MenuController : MonoBehaviour
 {
-    public void StartGame()
-    {
-        SceneManager.LoadScene("LevelSelect");
-    }
+
+    [SerializeField] private GameObject image;
+    [SerializeField] private GameObject button;
+
     public void OpenSettings()
     {
         //SceneManager.LoadScene("Settings");
@@ -20,5 +21,11 @@ public class MenuController : MonoBehaviour
     public void StartLevel1()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void OpenImage()
+    {
+        image.SetActive(true);
+        button.SetActive(true);
     }
 }

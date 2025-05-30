@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject winPanel;
 
     public void OpenSettingsPanel()
     {
@@ -27,6 +28,12 @@ public class UIManager : MonoBehaviour
     public void OpenGameOverPanel()
     {
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void OpenWinPanel()
+    {
+        winPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
