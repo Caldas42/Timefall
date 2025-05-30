@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using Unity.VisualScripting;
 
 public class Turret : MonoBehaviour
 {
@@ -10,58 +9,104 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
 
-    [Header("Attribute")]
+    [Header("Attributes")]
     [SerializeField] private float targetingRange = 3f;
     [SerializeField] private float rotationSpeed = 200f;
-    [SerializeField] private float bps = 1.5f; // Bullets Per Second
+    [SerializeField] private float bps = 1f; // Bullets Per Second
 
     private Transform target;
     private float timeUntilFire;
 
+    // --- Sinergia ---
+    private GameObject synergyBulletPrefab;
+    private bool synergyActive = false;
+
+    private bool isSinergia = false;  // ✅ NOVA VARIÁVEL
+
+    private bool canShoot = true;
+
     private void Update()
     {
-        if(target == null){
+        if (!canShoot) return;
+
+        if (target == null)
+        {
             FindTarget();
             return;
         }
 
-        RotateTorwardsTarget();
+        RotateTowardsTarget();
 
-        if(!CheckTargetIsInRange()){
+        if (!CheckTargetIsInRange())
+        {
             target = null;
-        } else {
+        }
+        else
+        {
             timeUntilFire += Time.deltaTime;
 
-            if(timeUntilFire >= 1f / bps) {
+            if (timeUntilFire >= 1f / bps)
+            {
                 Shoot();
                 timeUntilFire = 0f;
             }
         }
     }
 
-    private void FindTarget() {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
+    private void FindTarget()
+    {
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMask);
 
-        if (hits.Length > 0){
+        if (hits.Length > 0)
+        {
             target = hits[0].transform;
         }
     }
 
-    private void RotateTorwardsTarget() {
+    private void RotateTowardsTarget()
+    {
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    private bool CheckTargetIsInRange() {
+    private bool CheckTargetIsInRange()
+    {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
 
-    private void Shoot() {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+    private void Shoot()
+    {
+        GameObject prefabToUse = synergyActive ? synergyBulletPrefab : bulletPrefab;
+
+        GameObject bulletObj = Instantiate(prefabToUse, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
+    }
+
+    public void SetSynergyBullet(GameObject synergyBullet)
+    {
+        synergyBulletPrefab = synergyBullet;
+        synergyActive = true;
+        isSinergia = true;  // ✅ MARCA QUE JÁ FEZ SINERGIA
+    }
+
+    public void ResetSynergy()
+    {
+        synergyActive = false;
+        synergyBulletPrefab = null;
+        isSinergia = false;  // ✅ PERMITE SINERGIA NOVAMENTE
+    }
+
+    public void SetCanShoot(bool value)
+    {
+        canShoot = value;
+    }
+
+    public bool HasSinergia()
+    {
+        return isSinergia;
     }
 
     private void OnDrawGizmosSelected()

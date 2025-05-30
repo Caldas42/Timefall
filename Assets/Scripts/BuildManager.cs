@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class BuildManager : MonoBehaviour{
     public static BuildManager main;
@@ -17,6 +18,16 @@ public class BuildManager : MonoBehaviour{
 
    public void SetSelectedTower(int _selectedTower) {
         selectedtroop = _selectedTower;
-   } 
+   }
+
+     internal Tower GetTowerByIndex(int index)
+     {
+          if (index >= 0 && index < towers.Length)
+          {
+               return towers[index];
+          }
+          
+          return null;
+    }
 }
 
