@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class SynergyManager : MonoBehaviour
 {
     [SerializeField] private GameObject synergyBulletPrefab;
-    [SerializeField] private Button synergyButton;
+    [SerializeField] private Button synergyButton;   // botão já no canvas
 
     private Turret[] allTurrets;
 
-    private Turret turretArea;  // ✅ Para armazenar o par encontrado
+    private Turret turretArea;
     private Turret turretFogo;
 
     private void Start()
@@ -23,7 +23,6 @@ public class SynergyManager : MonoBehaviour
 
         bool synergyPossible = false;
 
-        // Reset do par encontrado
         turretArea = null;
         turretFogo = null;
 
@@ -33,7 +32,6 @@ public class SynergyManager : MonoBehaviour
             {
                 if (Vector2.Distance(allTurrets[i].transform.position, allTurrets[j].transform.position) < 1.5f)
                 {
-                    // Só faz sinergia se NENHUM dos dois tiver sinergia
                     if (!allTurrets[i].HasSinergia() && !allTurrets[j].HasSinergia())
                     {
                         if (IsAreaTurret(allTurrets[i]) && IsFireTurret(allTurrets[j]))
@@ -57,6 +55,13 @@ public class SynergyManager : MonoBehaviour
         }
 
         synergyButton.gameObject.SetActive(synergyPossible);
+
+        if (synergyPossible)
+        {
+            // Posiciona o botão em cima da torre area (ajuste o Vector3.up * offset se quiser mais pra cima)
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(turretArea.transform.position + Vector3.up * 1f);
+            synergyButton.transform.position = screenPos;
+        }
     }
 
     private bool IsFireTurret(Turret turret)
