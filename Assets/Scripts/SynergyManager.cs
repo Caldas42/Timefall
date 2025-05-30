@@ -8,6 +8,9 @@ public class SynergyManager : MonoBehaviour
 
     private Turret[] allTurrets;
 
+    private Turret turretArea;  // ✅ Para armazenar o par encontrado
+    private Turret turretFogo;
+
     private void Start()
     {
         synergyButton.gameObject.SetActive(false);
@@ -16,9 +19,13 @@ public class SynergyManager : MonoBehaviour
 
     private void Update()
     {
-    allTurrets = Object.FindObjectsByType<Turret>(FindObjectsSortMode.None);
+        allTurrets = Object.FindObjectsByType<Turret>(FindObjectsSortMode.None);
 
         bool synergyPossible = false;
+
+        // Reset do par encontrado
+        turretArea = null;
+        turretFogo = null;
 
         for (int i = 0; i < allTurrets.Length; i++)
         {
@@ -26,11 +33,23 @@ public class SynergyManager : MonoBehaviour
             {
                 if (Vector2.Distance(allTurrets[i].transform.position, allTurrets[j].transform.position) < 1.5f)
                 {
-                    if (IsAreaTurret(allTurrets[i]) && IsFireTurret(allTurrets[j]) ||
-                        IsFireTurret(allTurrets[i]) && IsAreaTurret(allTurrets[j]))
+                    // Só faz sinergia se NENHUM dos dois tiver sinergia
+                    if (!allTurrets[i].HasSinergia() && !allTurrets[j].HasSinergia())
                     {
-                        synergyPossible = true;
-                        break;
+                        if (IsAreaTurret(allTurrets[i]) && IsFireTurret(allTurrets[j]))
+                        {
+                            turretArea = allTurrets[i];
+                            turretFogo = allTurrets[j];
+                            synergyPossible = true;
+                            break;
+                        }
+                        else if (IsFireTurret(allTurrets[i]) && IsAreaTurret(allTurrets[j]))
+                        {
+                            turretArea = allTurrets[j];
+                            turretFogo = allTurrets[i];
+                            synergyPossible = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -38,16 +57,6 @@ public class SynergyManager : MonoBehaviour
         }
 
         synergyButton.gameObject.SetActive(synergyPossible);
-
-        if (!synergyPossible)
-        {
-            // Reseta tudo se sinergia não possível (botão some)
-            foreach (var turret in allTurrets)
-            {
-                turret.ResetSynergy();
-                turret.SetCanShoot(true);
-            }
-        }
     }
 
     private bool IsFireTurret(Turret turret)
@@ -62,23 +71,12 @@ public class SynergyManager : MonoBehaviour
 
     private void ActivateSynergy()
     {
-        foreach (var turret in allTurrets)
+        if (turretArea != null && turretFogo != null)
         {
-            if (IsAreaTurret(turret))
-            {
-                turret.SetSynergyBullet(synergyBulletPrefab);
-                turret.SetCanShoot(true);
-            }
-            else if (IsFireTurret(turret))
-            {
-                turret.ResetSynergy();
-                turret.SetCanShoot(false);
-            }
-            else
-            {
-                turret.ResetSynergy();
-                turret.SetCanShoot(true);
-            }
+            turretArea.SetSynergyBullet(synergyBulletPrefab);
+            turretArea.SetCanShoot(true);
+
+            turretFogo.SetCanShoot(false);
         }
     }
 }

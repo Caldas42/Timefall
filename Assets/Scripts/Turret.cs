@@ -21,12 +21,13 @@ public class Turret : MonoBehaviour
     private GameObject synergyBulletPrefab;
     private bool synergyActive = false;
 
-    // Controla se a torre pode atirar (para bloquear torres de fogo na sinergia)
+    private bool isSinergia = false;  // ✅ NOVA VARIÁVEL
+
     private bool canShoot = true;
 
     private void Update()
     {
-        if (!canShoot) return; // se não pode atirar, ignora update
+        if (!canShoot) return;
 
         if (target == null)
         {
@@ -84,24 +85,28 @@ public class Turret : MonoBehaviour
         bulletScript.SetTarget(target);
     }
 
-    // Ativa sinergia, muda a bala e seta flag
     public void SetSynergyBullet(GameObject synergyBullet)
     {
         synergyBulletPrefab = synergyBullet;
         synergyActive = true;
+        isSinergia = true;  // ✅ MARCA QUE JÁ FEZ SINERGIA
     }
 
-    // Reseta sinergia para padrão
     public void ResetSynergy()
     {
         synergyActive = false;
         synergyBulletPrefab = null;
+        isSinergia = false;  // ✅ PERMITE SINERGIA NOVAMENTE
     }
 
-    // Controla se a torre pode atirar ou não
     public void SetCanShoot(bool value)
     {
         canShoot = value;
+    }
+
+    public bool HasSinergia()
+    {
+        return isSinergia;
     }
 
     private void OnDrawGizmosSelected()
