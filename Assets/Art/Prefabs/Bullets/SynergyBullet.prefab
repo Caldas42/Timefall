@@ -167,11 +167,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7986890656552793513}
   bulletSpeed: 4
-  bulletDamage: 50
+  bulletDamage: 45
   explosionRadius: 2
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   synergyBurnDuration: 4
-  synergyBurnDamagePerSecond: 5
+  synergyBurnDamagePerSecond: 7
   fireEffectPrefab: {fileID: 7140541241482650039, guid: 183a306b1429e984f952a4422ae99dfc, type: 3}

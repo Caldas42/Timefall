@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7986890656552793513}
   bulletSpeed: 10
-  bulletDamage: 10
+  bulletDamage: 12
   burnDuration: 4
-  burnDamagePerSecond: 5
+  burnDamagePerSecond: 7
   fireEffectPrefab: {fileID: 7140541241482650039, guid: 183a306b1429e984f952a4422ae99dfc, type: 3}
