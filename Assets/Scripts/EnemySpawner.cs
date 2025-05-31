@@ -71,11 +71,13 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
         }
     }
 
-    private void EnemyDestroyed()
-    {
-        // Diminui o número de inimigos vivos
+    private void EnemyDestroyed(){
         totalEnemiesAlive--;
+
+        // Checa se o jogo acabou
+        LevelManager.main.CheckVictoryCondition(currentWave, maxWaves, totalEnemiesAlive, isSpawning);
     }
+
 
     private IEnumerator StartWave()
     {
@@ -87,7 +89,7 @@ public class EnemySpawner : MonoBehaviour      // Classe que gerencia o spawn de
             timer += Time.deltaTime;
             yield return null; // Espera até o próximo frame
         }
-
+    
         // Ativa o spawn
         isSpawning = true;
         // Prepara a wave com base no número atual que está
