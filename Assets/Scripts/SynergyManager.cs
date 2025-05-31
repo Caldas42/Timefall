@@ -1,30 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SynergyManager : MonoBehaviour
 {
     [SerializeField] private GameObject synergyBulletPrefab;
-    [SerializeField] private Button synergyButton;   // botão já no canvas
+    [SerializeField] private Button synergyButton;   // botão já no canvas, referência única
 
     private Turret[] allTurrets;
-
-    private Turret turretArea;
-    private Turret turretFogo;
+    private List<(Turret, Turret)> synergyPairs = new List<(Turret, Turret)>();
+    private List<Button> synergyButtons = new List<Button>();
 
     private void Start()
     {
-        synergyButton.gameObject.SetActive(false);
-        synergyButton.onClick.AddListener(ActivateSynergy);
+        synergyButton.gameObject.SetActive(false);  // Usado como modelo (clone)
     }
 
     private void Update()
     {
         allTurrets = Object.FindObjectsByType<Turret>(FindObjectsSortMode.None);
 
-        bool synergyPossible = false;
-
-        turretArea = null;
-        turretFogo = null;
+        synergyPairs.Clear();
 
         for (int i = 0; i < allTurrets.Length; i++)
         {
@@ -34,33 +30,67 @@ public class SynergyManager : MonoBehaviour
                 {
                     if (!allTurrets[i].HasSinergia() && !allTurrets[j].HasSinergia())
                     {
+                        Turret turretArea = null;
+                        Turret turretFogo = null;
+
                         if (IsAreaTurret(allTurrets[i]) && IsFireTurret(allTurrets[j]))
                         {
                             turretArea = allTurrets[i];
                             turretFogo = allTurrets[j];
-                            synergyPossible = true;
-                            break;
                         }
                         else if (IsFireTurret(allTurrets[i]) && IsAreaTurret(allTurrets[j]))
                         {
                             turretArea = allTurrets[j];
                             turretFogo = allTurrets[i];
-                            synergyPossible = true;
-                            break;
+                        }
+
+                        if (turretArea != null && turretFogo != null)
+                        {
+                            synergyPairs.Add((turretArea, turretFogo));
                         }
                     }
                 }
             }
-            if (synergyPossible) break;
         }
 
-        synergyButton.gameObject.SetActive(synergyPossible);
+        UpdateSynergyButtons();
+    }
 
-        if (synergyPossible)
+    private void UpdateSynergyButtons()
+    {
+        // Ajusta a quantidade de botões instanciados
+        while (synergyButtons.Count < synergyPairs.Count)
         {
-            // Posiciona o botão em cima da torre area (ajuste o Vector3.up * offset se quiser mais pra cima)
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(turretArea.transform.position + Vector3.up * 1f);
-            synergyButton.transform.position = screenPos;
+            Button newButton = Instantiate(synergyButton, synergyButton.transform.parent);
+            newButton.gameObject.SetActive(false);
+            synergyButtons.Add(newButton);
+        }
+
+        // Ativa e posiciona apenas os necessários
+        for (int i = 0; i < synergyButtons.Count; i++)
+        {
+            if (i < synergyPairs.Count)
+            {
+                synergyButtons[i].gameObject.SetActive(true);
+                var pair = synergyPairs[i];
+
+                // Posiciona o botão acima da torre de área
+                Vector3 screenPos = Camera.main.WorldToScreenPoint(pair.Item1.transform.position + Vector3.up * 1f);
+                synergyButtons[i].transform.position = screenPos;
+
+                // Remove listeners antigos para evitar empilhamento
+                synergyButtons[i].onClick.RemoveAllListeners();
+
+                // Adiciona listener específico para esta dupla
+                synergyButtons[i].onClick.AddListener(() =>
+                {
+                    ActivateSynergy(pair.Item1, pair.Item2);
+                });
+            }
+            else
+            {
+                synergyButtons[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -74,7 +104,7 @@ public class SynergyManager : MonoBehaviour
         return turret.name.ToLower().Contains("area");
     }
 
-    private void ActivateSynergy()
+    private void ActivateSynergy(Turret turretArea, Turret turretFogo)
     {
         if (turretArea != null && turretFogo != null)
         {
