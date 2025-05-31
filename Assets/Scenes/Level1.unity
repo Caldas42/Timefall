@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Archer Tower
+  m_text: Torre de Arqueiro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10051,7 +10051,7 @@ MonoBehaviour:
   - {fileID: 579759321}
   - {fileID: 193794002}
   - {fileID: 1852464392}
-  currency: 60
+  currency: 80
   remainingLives: 20
   uIManager: {fileID: 618250663}
 --- !u!114 &618250661
@@ -10088,13 +10088,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - name: Archer Tower
-    cost: 55
+  - name: Torre de Arqueiro
+    cost: 45
     prefab: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
-  - name: Catapult
+  - name: Catapulta
     cost: 140
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
-  - name: Fire Jar
+  - name: Jarro de Fogo
     cost: 160
     prefab: {fileID: 5238912390334813594, guid: afe8140c5f55a5949ab969c94175106e, type: 3}
 --- !u!114 &618250663
@@ -24194,8 +24194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -45.309597, y: 0}
+  m_SizeDelta: {x: -90.6193, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507051038
 MonoBehaviour:
@@ -24217,7 +24217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fire Jar
+  m_text: Jarro de Fogo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24251,7 +24251,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -29551,8 +29551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -48.807102, y: 0}
-  m_SizeDelta: {x: -97.6142, y: 0}
+  m_AnchoredPosition: {x: -45.523796, y: 0}
+  m_SizeDelta: {x: -91.0477, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813052335
 MonoBehaviour:
@@ -29574,7 +29574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Catapult
+  m_text: Catapulta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34332,6 +34332,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 618250659}
+  - {fileID: 692472115}
   - {fileID: 394161966}
   - {fileID: 974293503}
   - {fileID: 312389493}
@@ -34340,4 +34341,3 @@ SceneRoots:
   - {fileID: 365678207}
   - {fileID: 1595938874}
   - {fileID: 809366953}
-  - {fileID: 692472115}
