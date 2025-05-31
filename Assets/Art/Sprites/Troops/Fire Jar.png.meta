@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e8f5511c372b7e45a1fcba32193bdb6
+guid: 3bef53e6d666d3e4e8249d17e4033a37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4326872430171513394
-    second: Tank_0
+      213: 941078575961034377
+    second: Fire Jar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tank_0
+      name: Fire Jar_0
       rect:
         serializedVersion: 2
-        x: 212
-        y: 152
-        width: 601
-        height: 1332
+        x: 271
+        y: 143
+        width: 418
+        height: 394
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 8, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 232edccec832c0c30800000000000000
-      internalID: 4326872430171513394
+      spriteID: 98e43e19af16f0d00800000000000000
+      internalID: 941078575961034377
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 93d61ed5a5cf5de418c5667017b3685b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tank_0: 4326872430171513394
+      Fire Jar_0: 941078575961034377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

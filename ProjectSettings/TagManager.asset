@@ -44,5 +44,8 @@ TagManager:
   - name: Troops
     uniqueID: 4101850211
     locked: 0
+  - name: New Layer 2
+    uniqueID: 3067940891
+    locked: 0
   m_RenderingLayers:
   - Default
