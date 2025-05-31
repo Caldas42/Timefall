@@ -47,18 +47,9 @@ public class LevelManager : MonoBehaviour
         }
 
     }
-    private bool gameEnded = false;
-
-    public void CheckVictoryCondition(int currentWave, int maxWaves, int enemiesRemaining, bool isSpawning)
-    {
-        if (gameEnded) return;
-
-        // Se todas as waves passaram, não há mais inimigos vivos nem a spawnar, e não está mais spawnando
-        if (currentWave >= maxWaves && enemiesRemaining <= 0 && !isSpawning)
-        {
-            gameEnded = true;
-            uIManager.OpenWinPanel();
-        }
-    }
-
+    public void Victory()
+{
+    uIManager.OpenWinPanel();
+}
+    
 }
