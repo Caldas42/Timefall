@@ -9877,7 +9877,7 @@ MonoBehaviour:
   - {fileID: 579759321}
   - {fileID: 193794002}
   - {fileID: 1852464392}
-  currency: 100
+  currency: 60
   remainingLives: 20
   uIManager: {fileID: 618250663}
 --- !u!114 &618250661
@@ -9915,13 +9915,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - name: Archer Tower
-    cost: 50
+    cost: 55
     prefab: {fileID: 5238912390334813594, guid: 2eeab411a3b9b994d96fa2543b10e924, type: 3}
   - name: Catapult
-    cost: 100
+    cost: 140
     prefab: {fileID: 5238912390334813594, guid: 0f86f0eaad749af4683acdd2c4f3483d, type: 3}
   - name: Fire Jar
-    cost: 25
+    cost: 160
     prefab: {fileID: 5238912390334813594, guid: afe8140c5f55a5949ab969c94175106e, type: 3}
 --- !u!114 &618250663
 MonoBehaviour:
