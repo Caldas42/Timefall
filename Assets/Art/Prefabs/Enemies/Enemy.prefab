@@ -181,4 +181,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
-  currencyWorth: 10
+  currencyWorth: 5
