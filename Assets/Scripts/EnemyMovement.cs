@@ -10,10 +10,12 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    private float originalXScale;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
+        originalXScale = transform.localScale.x;
     }
 
     private void Update()
@@ -37,5 +39,14 @@ public class EnemyMovement : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;
+
+        if (direction.x > 0.01f)
+        {
+            transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
+        }
+        else if (direction.x < -0.01f)
+        {
+            transform.localScale = new Vector3(-originalXScale, transform.localScale.y, transform.localScale.z);
+        }
     }
 }
