@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     void OnGUI()
     {
         currencyUI.text = LevelManager.main.currency.ToString();
-        remainingLivesUI.text = "Vidas: " + LevelManager.main.remainingLives.ToString();
+        remainingLivesUI.text = LevelManager.main.remainingLives.ToString();
     }
 
 }

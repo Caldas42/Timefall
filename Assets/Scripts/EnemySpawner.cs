@@ -174,6 +174,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void UpdateWaveUI()
     {
-        waveCounter.text = "Rodada: " + currentWave + "/" + maxWaves;
+        waveCounter.text = currentWave + "/" + maxWaves;
     }
 }
