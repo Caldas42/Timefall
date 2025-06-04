@@ -48,8 +48,8 @@ public class LevelManager : MonoBehaviour
 
     }
     public void Victory()
-{
-    uIManager.OpenWinPanel();
-}
+    {
+        uIManager.OpenWinPanel();
+    }
     
 }
