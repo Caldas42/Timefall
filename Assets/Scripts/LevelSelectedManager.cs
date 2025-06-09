@@ -2,12 +2,16 @@ using System.Threading;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelSelectedManager : MonoBehaviour
 {
     private bool ButtonState = true;
 
     [SerializeField] private AudioSource Music;
+
+    
+    [SerializeField] private TMP_Text volumeMusicText;
 
     [SerializeField] private Slider volumeSliderMusic;
     [SerializeField] private Slider volumeSliderSoundEffects;
@@ -38,16 +42,19 @@ public class LevelSelectedManager : MonoBehaviour
         if (ButtonState)
         {
             //muteImage.sprite = SoundOn;
+            volumeMusicText.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
         }
         else
         {
             //muteImage.sprite = SoundOff;  
+            volumeMusicText.text = Mathf.RoundToInt(volumeSliderMusic.value * 0) + "%";
         }
     }
 
     public void ChangeVolumeMusic()
     {
         AudioListener.volume = volumeSliderMusic.value;
+        volumeMusicText.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
     }
 
     /*
@@ -58,14 +65,23 @@ public class LevelSelectedManager : MonoBehaviour
     */
 
     public void load()
+{
+    if (volumeSliderMusic != null)
     {
         volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
-        volumeSliderSoundEffects.value = PlayerPrefs.GetFloat("SoundEffects");
     }
+    /*
+    if (volumeSliderSoundEffects != null && PlayerPrefs.HasKey("SoundEffects"))
+        {
+            volumeSliderSoundEffects.value = PlayerPrefs.GetFloat("SoundEffects");
+        }
+    */
+}
+
 
     public void save()
     {
         PlayerPrefs.SetFloat("MusicVolume", volumeSliderMusic.value);
-        PlayerPrefs.SetFloat("SoundEffects", volumeSliderSoundEffects.value);
+        //PlayerPrefs.SetFloat("SoundEffects", volumeSliderSoundEffects.value);
     }
 }
