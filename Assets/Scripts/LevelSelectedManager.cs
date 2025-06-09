@@ -1,6 +1,7 @@
 using System.Threading;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSelectedManager : MonoBehaviour
 {
@@ -8,10 +9,12 @@ public class LevelSelectedManager : MonoBehaviour
 
     [SerializeField]private AudioSource Music;
 
+    [SerializeField] private Slider volumeSlider;
+
     [SerializeField] private Sprite SoundOn;
     [SerializeField] private Sprite SoundOff;
 
-    [SerializeField] private Image muteImage;
+    //[SerializeField] private Image muteImage;
 
     public void LigarDesligarSom()
     {
