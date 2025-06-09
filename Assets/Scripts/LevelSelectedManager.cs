@@ -1,16 +1,30 @@
+using System.Threading;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class LevelSelectedManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private bool ButtonState = true;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]private AudioSource Music;
+
+    [SerializeField] private Sprite SoundOn;
+    [SerializeField] private Sprite SoundOff;
+
+    [SerializeField] private Image muteImage;
+
+    public void LigarDesligarSom()
     {
-        
+        ButtonState = !ButtonState;
+        Music.enabled = ButtonState;
+
+        if (ButtonState)
+        {
+            //muteImage.sprite = SoundOn;
+        }
+        else
+        {
+            //muteImage.sprite = SoundOff;  
+        }
     }
 }
