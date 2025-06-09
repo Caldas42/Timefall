@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 62369115}
   - component: {fileID: 62369114}
   - component: {fileID: 62369117}
+  - component: {fileID: 62369118}
   m_Layer: 5
   m_Name: Fire Troop
   m_TagString: Untagged
@@ -1101,6 +1102,18 @@ MonoBehaviour:
   towerIndex: 2
   nameText: {fileID: 1507051038}
   costText: {fileID: 1149762575}
+--- !u!114 &62369118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62369112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &68692368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16356,6 +16369,7 @@ GameObject:
   - component: {fileID: 930999154}
   - component: {fileID: 930999153}
   - component: {fileID: 930999156}
+  - component: {fileID: 930999157}
   m_Layer: 5
   m_Name: Area Troop
   m_TagString: Untagged
@@ -16493,6 +16507,18 @@ MonoBehaviour:
   towerIndex: 1
   nameText: {fileID: 1813052335}
   costText: {fileID: 2054549021}
+--- !u!114 &930999157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930999151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934825514
 GameObject:
   m_ObjectHideFlags: 0
@@ -26581,6 +26607,7 @@ GameObject:
   - component: {fileID: 1561916290}
   - component: {fileID: 1561916289}
   - component: {fileID: 1561916292}
+  - component: {fileID: 1561916293}
   m_Layer: 5
   m_Name: ArcherButton
   m_TagString: Untagged
@@ -26718,6 +26745,18 @@ MonoBehaviour:
   towerIndex: 0
   nameText: {fileID: 124175791}
   costText: {fileID: 195163825}
+--- !u!114 &1561916293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561916287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1569722086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
