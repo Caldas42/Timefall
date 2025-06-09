@@ -89,14 +89,14 @@ public class Turret : MonoBehaviour
     {
         synergyBulletPrefab = synergyBullet;
         synergyActive = true;
-        isSinergia = true;  // ✅ MARCA QUE JÁ FEZ SINERGIA
+        isSinergia = true;
     }
 
     public void ResetSynergy()
     {
         synergyActive = false;
         synergyBulletPrefab = null;
-        isSinergia = false;  // ✅ PERMITE SINERGIA NOVAMENTE
+        isSinergia = false;
     }
 
     public void SetCanShoot(bool value)
