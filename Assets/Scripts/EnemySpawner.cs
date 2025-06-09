@@ -140,8 +140,6 @@ public class EnemySpawner : MonoBehaviour
                 Shuffle(enemiesToSpawn);
                 break;
         }
-
-        // Não seta mais totalEnemiesAlive aqui — corrigido
     }
 
     private bool TrySpawnEnemy()
@@ -158,7 +156,7 @@ public class EnemySpawner : MonoBehaviour
     private void Spawn(GameObject prefab)
     {
         Instantiate(prefab, LevelManager.main.startPoint.position, Quaternion.identity);
-        totalEnemiesAlive++; // Corrigido: conta inimigos vivos no momento do spawn
+        totalEnemiesAlive++;
     }
 
     private void Shuffle(List<int> list)
