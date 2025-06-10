@@ -3096,7 +3096,6 @@ MonoBehaviour:
   - {fileID: 1944803361}
   - {fileID: 2136635482}
   - {fileID: 1852464392}
-  livesText: {fileID: 0}
   currency: 0
   remainingLives: 0
   uIManager: {fileID: 0}
@@ -3117,6 +3116,7 @@ MonoBehaviour:
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
   maxWaves: 10
+  waveCounter: {fileID: 0}
 --- !u!114 &618250662
 MonoBehaviour:
   m_ObjectHideFlags: 0
