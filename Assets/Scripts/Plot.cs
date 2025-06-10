@@ -3,7 +3,7 @@ using UnityEngine;
 public class Plot : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private SpriteRenderer sr; 
+    [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
     private GameObject Troop;
     private Color startColor;
@@ -41,7 +41,8 @@ public class Plot : MonoBehaviour
         sr.color = startColor;
     }
 
-    private void OnMouseDown()
+    // Removendo a funcionalidade de clique
+    /*private void OnMouseDown()
     {
         // Verifica se o plot é colocável antes de permitir qualquer ação
         if (!isPlaceable)
@@ -65,5 +66,5 @@ public class Plot : MonoBehaviour
 
         // Instancia a torre no plot
         Troop = Instantiate(TroopToBuild.prefab, transform.position, Quaternion.identity);
-    }
+    }*/
 }
