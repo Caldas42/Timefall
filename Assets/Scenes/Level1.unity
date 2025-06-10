@@ -10634,8 +10634,8 @@ MonoBehaviour:
   - {fileID: 6587219627160654117, guid: eb1c0fb64854612449f497480d616e87, type: 3}
   - {fileID: 6587219627160654117, guid: 26b3eb13e538e0b4bb4d477c178ea67f, type: 3}
   - {fileID: 6587219627160654117, guid: 930f9a98d744663469a605a4231b839c, type: 3}
-  enemiesPerSecond: 1
-  timeBetweenWaves: 3
+  enemiesPerSecond: 0.25
+  timeBetweenWaves: 5
   maxWaves: 5
   waveCounter: {fileID: 752880931}
 --- !u!114 &618250662
