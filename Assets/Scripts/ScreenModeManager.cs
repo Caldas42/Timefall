@@ -4,6 +4,7 @@ using TMPro;
 public class ScreenModeSelector : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
+    private int pendingScreenModeIndex = -1;
 
     void Start()
     {
@@ -12,12 +13,17 @@ public class ScreenModeSelector : MonoBehaviour
             Debug.LogError("Dropdown não está atribuído no Inspector!");
             return;
         }
-
-        dropdown.onValueChanged.AddListener(OnScreenModeChanged);
-        OnScreenModeChanged(dropdown.value);
+        dropdown.onValueChanged.AddListener(OnScreenModeSelected);
     }
 
-    void OnScreenModeChanged(int index)
+    void OnScreenModeSelected(int index)
+    {
+        pendingScreenModeIndex = index;
+
+        ApplyScreenMode(index);
+    }
+
+    void ApplyScreenMode(int index)
     {
         if (index == 0)
         {
