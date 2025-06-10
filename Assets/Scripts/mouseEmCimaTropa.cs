@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShowRangeOnHover : MonoBehaviour
+public class ShowRangeOnClick : MonoBehaviour
 {
     public GameObject rangeIndicator;
 
@@ -12,19 +12,12 @@ public class ShowRangeOnHover : MonoBehaviour
         }
     }
 
-    void OnMouseEnter()
+    void OnMouseDown()
     {
         if (rangeIndicator != null)
         {
-            rangeIndicator.SetActive(true);
-        }
-    }
-
-    void OnMouseExit()
-    {
-        if (rangeIndicator != null)
-        {
-            rangeIndicator.SetActive(false);
+            bool isActive = rangeIndicator.activeSelf;
+            rangeIndicator.SetActive(!isActive);
         }
     }
 }
