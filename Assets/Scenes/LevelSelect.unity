@@ -816,9 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music: {fileID: 1222007160}
-  volumeMusicText: {fileID: 0}
-  volumeSliderMusic: {fileID: 0}
-  volumeSliderSoundEffects: {fileID: 0}
+  volumeMusicText: {fileID: 1977901125}
+  volumeSliderMusic: {fileID: 1196870585}
+  volumeSliderSoundEffects: {fileID: 740139211}
   SoundOn: {fileID: 0}
   SoundOff: {fileID: 0}
 --- !u!4 &242977722
