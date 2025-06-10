@@ -36,10 +36,13 @@ public class EnemySpawner : MonoBehaviour
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-    private void Start()
+    public void OnPlayButtonPressed()
+{
+    if (!isSpawning && totalEnemiesAlive <= 0)
     {
         StartCoroutine(StartWave());
     }
+}
 
     private void Update()
     {
