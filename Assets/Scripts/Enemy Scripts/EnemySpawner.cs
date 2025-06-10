@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
     [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private int maxWaves = 5;
+    [SerializeField] private int maxWaves = 9;
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
@@ -63,77 +63,80 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void EnemyDestroyed()
-{
-    totalEnemiesAlive--;
-
-    if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
     {
-        if (currentWave >= maxWaves)
+        totalEnemiesAlive--;
+
+        if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
         {
-            Debug.Log("Vitória! Todas as waves concluídas e inimigos derrotados.");
-            LevelManager.main.Victory();
-        }
-        else
-        {
-            currentWave++;
-            StartCoroutine(StartWave());
+            if (currentWave >= maxWaves)
+            {
+                LevelManager.main.Victory();
+            }
+            else
+            {
+                currentWave++;
+                StartCoroutine(StartWave());
+            }
         }
     }
-}
 
     private IEnumerator StartWave()
-{
-    float timer = 0f;
-    while (timer < timeBetweenWaves)
     {
-        timer += Time.deltaTime;
-        yield return null;
+        float timer = 0f;
+        while (timer < timeBetweenWaves)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        SetupWave(currentWave);
+        UpdateWaveUI();
+        
+        isSpawning = true;
+        timeSinceLastSpawn = 0f;
     }
 
-    SetupWave(currentWave);
-    UpdateWaveUI();
-    
-    isSpawning = true;
-    timeSinceLastSpawn = 0f;
-}
-
-private void EndWave()
-{
-    isSpawning = false;
-}
+    private void EndWave()
+    {
+        isSpawning = false;
+    }
 
 
     private void SetupWave(int wave)
     {
         enemiesToSpawn.Clear();
 
-        switch (wave)
+        if (wave == maxWaves)
         {
-            case 1:
-                for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
-                break;
-            case 2:
-                for (int i = 0; i < 10; i++) enemiesToSpawn.Add(0);
-                for (int i = 0; i < 5; i++) enemiesToSpawn.Add(1);
-                break;
-            case 3:
-                for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
-                for (int i = 0; i < 8; i++) enemiesToSpawn.Add(1);
-                for (int i = 0; i < 8; i++) enemiesToSpawn.Add(2);
-                break;
-            case 5:
-                enemiesToSpawn.Add(3); // Ex: Boss
-                break;
-            default:
-                int extra = wave - 3;
-                int normalCount = normalEnemyCount + extra * 2;
-                int fastCount = fastEnemyCount + extra * 2;
-                int tankCount = tankEnemyCount + extra * 2;
+            enemiesToSpawn.Add(3);
+        }
+        else
+        {
+            switch (wave)
+            {
+                case 1:
+                    for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
+                    break;
+                case 2:
+                    for (int i = 0; i < 10; i++) enemiesToSpawn.Add(0);
+                    for (int i = 0; i < 5; i++) enemiesToSpawn.Add(1);
+                    break;
+                case 3:
+                    for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
+                    for (int i = 0; i < 8; i++) enemiesToSpawn.Add(1);
+                    for (int i = 0; i < 8; i++) enemiesToSpawn.Add(2);
+                    break;
+                default:
+                    int extra = wave - 3;
+                    int normalCount = normalEnemyCount + extra * 2;
+                    int fastCount = fastEnemyCount + extra * 2;
+                    int tankCount = tankEnemyCount + extra * 2;
 
-                for (int i = 0; i < normalCount; i++) enemiesToSpawn.Add(0);
-                for (int i = 0; i < fastCount; i++) enemiesToSpawn.Add(1);
-                for (int i = 0; i < tankCount; i++) enemiesToSpawn.Add(2);
-                break;
+                    for (int i = 0; i < normalCount; i++) enemiesToSpawn.Add(0);
+                    for (int i = 0; i < fastCount; i++) enemiesToSpawn.Add(1);
+                    for (int i = 0; i < tankCount; i++) enemiesToSpawn.Add(2);
+                    break;
+            }
         }
     }
 
