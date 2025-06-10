@@ -413,15 +413,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
-      - m_Target: {fileID: 179124114}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-=======
       - m_Target: {fileID: 242977723}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: CloseSettingsPanel
->>>>>>> 22cd7dbe0868af2314b45b5e4559ee092392ff41
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -502,18 +496,10 @@ RectTransform:
   - {fileID: 1196870584}
   - {fileID: 740139210}
   - {fileID: 179124115}
-<<<<<<< HEAD
-  - {fileID: 567649763}
-  - {fileID: 1356527684}
-  - {fileID: 1657797103}
-  - {fileID: 1943985664}
-=======
   - {fileID: 2126621556}
   - {fileID: 660579873}
   - {fileID: 1977901124}
-<<<<<<< HEAD
   - {fileID: 2044889814}
->>>>>>> 22cd7dbe0868af2314b45b5e4559ee092392ff41
   m_Father: {fileID: 189241114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -830,9 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music: {fileID: 1222007160}
-  volumeMusicText: {fileID: 1977901125}
-  volumeSliderMusic: {fileID: 1196870585}
-  volumeSliderSoundEffects: {fileID: 740139211}
+  volumeMusicText: {fileID: 0}
+  volumeSliderMusic: {fileID: 0}
+  volumeSliderSoundEffects: {fileID: 0}
   SoundOn: {fileID: 0}
   SoundOff: {fileID: 0}
 --- !u!4 &242977722
@@ -4267,15 +4253,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1943985663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.4798858}
-  m_LocalScale: {x: 0.53541666, y: 0.53541666, z: 0.53541666}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1071415191}
-=======
   m_GameObject: {fileID: 1894452703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -4670,18 +4647,12 @@ RectTransform:
   - {fileID: 1894452704}
   - {fileID: 1179522674}
   - {fileID: 1097144353}
->>>>>>> 22cd7dbe0868af2314b45b5e4559ee092392ff41
   m_Father: {fileID: 184760631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 149.44667, y: 54.13642}
-  m_SizeDelta: {x: 290.417, y: 47.784}
-=======
   m_AnchoredPosition: {x: 150, y: 0}
   m_SizeDelta: {x: 160, y: 30}
->>>>>>> 22cd7dbe0868af2314b45b5e4559ee092392ff41
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044889815
 MonoBehaviour:
@@ -4878,15 +4849,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
-      - m_Target: {fileID: 1943985665}
-        m_TargetAssemblyTypeName: ResetGame, Assembly-CSharp
-        m_MethodName: ResetToStart
-=======
       - m_Target: {fileID: 242977721}
         m_TargetAssemblyTypeName: LevelSelectedManager, Assembly-CSharp
         m_MethodName: LigarDesligarSom
->>>>>>> 22cd7dbe0868af2314b45b5e4559ee092392ff41
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
