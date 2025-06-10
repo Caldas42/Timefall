@@ -63,47 +63,45 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void EnemyDestroyed()
-    {
-        totalEnemiesAlive--;
+{
+    totalEnemiesAlive--;
 
-        if (currentWave >= maxWaves && totalEnemiesAlive <= 0)
+    if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
+    {
+        if (currentWave >= maxWaves)
         {
             Debug.Log("Vitória! Todas as waves concluídas e inimigos derrotados.");
             LevelManager.main.Victory();
         }
+        else
+        {
+            currentWave++;
+            StartCoroutine(StartWave());
+        }
     }
+}
 
     private IEnumerator StartWave()
+{
+    float timer = 0f;
+    while (timer < timeBetweenWaves)
     {
-        float timer = 0f;
-
-        while (timer < timeBetweenWaves)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        isSpawning = true;
-        SetupWave(currentWave);
-        UpdateWaveUI();
+        timer += Time.deltaTime;
+        yield return null;
     }
 
-    private void EndWave()
-    {
-        isSpawning = false;
-        timeSinceLastSpawn = 0f;
+    SetupWave(currentWave);
+    UpdateWaveUI();
+    
+    isSpawning = true;
+    timeSinceLastSpawn = 0f;
+}
 
-        if (currentWave >= maxWaves)
-        {
-            Debug.Log("Todas as waves concluídas. Fim do spawn de inimigos.");
-            UpdateWaveUI();
-            return;
-        }
+private void EndWave()
+{
+    isSpawning = false;
+}
 
-        currentWave++;
-        UpdateWaveUI();
-        StartCoroutine(StartWave());
-    }
 
     private void SetupWave(int wave)
     {
@@ -117,13 +115,11 @@ public class EnemySpawner : MonoBehaviour
             case 2:
                 for (int i = 0; i < 10; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < 5; i++) enemiesToSpawn.Add(1);
-                Shuffle(enemiesToSpawn);
                 break;
             case 3:
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(1);
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(2);
-                Shuffle(enemiesToSpawn);
                 break;
             case 5:
                 enemiesToSpawn.Add(3); // Ex: Boss
@@ -137,7 +133,6 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < normalCount; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < fastCount; i++) enemiesToSpawn.Add(1);
                 for (int i = 0; i < tankCount; i++) enemiesToSpawn.Add(2);
-                Shuffle(enemiesToSpawn);
                 break;
         }
     }
@@ -159,16 +154,6 @@ public class EnemySpawner : MonoBehaviour
         totalEnemiesAlive++;
     }
 
-    private void Shuffle(List<int> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            int randomIndex = Random.Range(i, list.Count);
-            int temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
-    }
 
     private void UpdateWaveUI()
     {

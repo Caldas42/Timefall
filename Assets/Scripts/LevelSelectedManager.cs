@@ -35,16 +35,17 @@ public class LevelSelectedManager : MonoBehaviour
     public void LigarDesligarSom()
     {
         ButtonState = !ButtonState;
-        Music.enabled = ButtonState;
+        AudioListener.volume = 0;
 
         if (ButtonState)
         {
             //muteImage.sprite = SoundOn;
             volumeMusicText.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
+            AudioListener.volume = volumeSliderMusic.value;
         }
         else
         {
-            //muteImage.sprite = SoundOff;  
+            //muteImage.sprite = SoundOff;
             volumeMusicText.text = Mathf.RoundToInt(volumeSliderMusic.value * 0) + "%";
         }
     }
