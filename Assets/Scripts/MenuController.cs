@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
 
     public void OpenMainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Title Screen");
     }
 
     public void StartLevel1()
@@ -26,6 +26,6 @@ public class MenuController : MonoBehaviour
 
     public void OpenLevelSelect()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("Menu");
     }
 }

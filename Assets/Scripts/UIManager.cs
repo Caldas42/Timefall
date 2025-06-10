@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     public void GoToLevelSelect()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("Menu");
     }
 
     public void OpenGameOverPanel()
