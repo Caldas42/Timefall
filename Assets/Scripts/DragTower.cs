@@ -7,11 +7,13 @@ public class TowerDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     private Tower towerData;
     private Camera cam;
 
-    private void Start()
-    {
-        cam = Camera.main;
-        towerData = BuildManager.main.GetTowerByIndex(GetComponent<TowerButtonUI>().towerIndex);
-    }
+private void Start()
+{
+    cam = Camera.main;
+    var ui = GetComponent<TowerButtonUI>();
+    towerData = BuildManager.main.GetTowerByIndex(ui.towerIndex);
+    BuildManager.main.SetSelectedTower(ui.towerIndex);
+}
 
     public void OnBeginDrag(PointerEventData eventData)
     {

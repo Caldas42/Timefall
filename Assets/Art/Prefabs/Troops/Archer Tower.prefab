@@ -248,7 +248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5810214309050244863}
   - component: {fileID: 1443133707498042333}
-  - component: {fileID: 6678191508164540330}
   m_Layer: 0
   m_Name: Archer Tower
   m_TagString: Untagged
@@ -295,19 +294,6 @@ MonoBehaviour:
   targetingRange: 3
   rotationSpeed: 200
   bps: 1.8
---- !u!114 &6678191508164540330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238912390334813594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f74293901da7f874f82201cd0ffd39b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangeIndicator: {fileID: 4773807867371664375}
 --- !u!1 &8858222251921420464
 GameObject:
   m_ObjectHideFlags: 0
