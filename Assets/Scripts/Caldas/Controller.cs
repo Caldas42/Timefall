@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
-public class MenuController : MonoBehaviour
+public class Controller : MonoBehaviour
 {
 
     [SerializeField] private GameObject image;
@@ -26,6 +26,6 @@ public class MenuController : MonoBehaviour
 
     public void OpenLevelSelect()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu 1");
     }
 }
