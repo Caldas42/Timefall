@@ -8,11 +8,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject image;
     [SerializeField] private GameObject button;
 
-    public void OpenSettings()
-    {
-        //SceneManager.LoadScene("Settings");
-    }
-
     public void OpenMainMenu()
     {
         SceneManager.LoadScene("Menu");
