@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
+    [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private int maxWaves = 5;
 
     [Header("Events")]
@@ -62,44 +63,45 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void EnemyDestroyed()
-    {
-        totalEnemiesAlive--;
+{
+    totalEnemiesAlive--;
 
-        if (currentWave >= maxWaves && totalEnemiesAlive <= 0)
+    if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
+    {
+        if (currentWave >= maxWaves)
         {
             Debug.Log("Vitória! Todas as waves concluídas e inimigos derrotados.");
             LevelManager.main.Victory();
         }
+        else
+        {
+            currentWave++;
+            StartCoroutine(StartWave());
+        }
     }
+}
 
     private IEnumerator StartWave()
+{
+    float timer = 0f;
+    while (timer < timeBetweenWaves)
     {
-        float timer = 0f;
-
         timer += Time.deltaTime;
-
-        isSpawning = true;
-        SetupWave(currentWave);
-        UpdateWaveUI();
         yield return null;
     }
 
-    private void EndWave()
-    {
-        isSpawning = false;
-        timeSinceLastSpawn = 0f;
+    SetupWave(currentWave);
+    UpdateWaveUI();
+    
+    isSpawning = true;
+    timeSinceLastSpawn = 0f;
+}
 
-        if (currentWave >= maxWaves)
-        {
-            Debug.Log("Todas as waves concluídas. Fim do spawn de inimigos.");
-            UpdateWaveUI();
-            return;
-        }
+private void EndWave()
+{
+    isSpawning = false;
+}
 
-        currentWave++;
-        UpdateWaveUI();
-        StartCoroutine(StartWave());
-    }
 
     private void SetupWave(int wave)
     {
