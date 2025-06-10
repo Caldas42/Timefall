@@ -28,4 +28,9 @@ public class MenuController : MonoBehaviour
         image.SetActive(true);
         button.SetActive(true);
     }
+
+    public void OpenLevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }
