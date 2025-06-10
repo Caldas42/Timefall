@@ -31,6 +31,12 @@ public class EnemySpawner : MonoBehaviour
     private int fastEnemyCount = 10;
     private int tankEnemyCount = 12;
 
+    private void Start()
+{
+    Time.timeScale = 0f;
+
+}
+
     private void Awake()
     {
         onEnemyDestroy.AddListener(EnemyDestroyed);
@@ -40,6 +46,7 @@ public class EnemySpawner : MonoBehaviour
 {
     if (!isSpawning && totalEnemiesAlive <= 0)
     {
+        Time.timeScale = 1f;
         StartCoroutine(StartWave());
     }
 }
@@ -78,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
             else
             {
                 currentWave++;
-                StartCoroutine(StartWave());
+                Time.timeScale = 0f;
             }
         }
     }
