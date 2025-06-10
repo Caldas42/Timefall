@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
-    public string initialSceneName = "Menu";
+    public string initialSceneName = "Title Screen";
 
     public void ResetToStart()
     {
