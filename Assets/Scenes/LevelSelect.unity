@@ -499,7 +499,6 @@ RectTransform:
   - {fileID: 2126621556}
   - {fileID: 660579873}
   - {fileID: 1977901124}
-<<<<<<< HEAD
   - {fileID: 2044889814}
   m_Father: {fileID: 189241114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -817,9 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Music: {fileID: 1222007160}
-  volumeMusicText: {fileID: 1977901125}
-  volumeSliderMusic: {fileID: 1196870585}
-  volumeSliderSoundEffects: {fileID: 740139211}
+  volumeMusicText: {fileID: 0}
+  volumeSliderMusic: {fileID: 0}
+  volumeSliderSoundEffects: {fileID: 0}
   SoundOn: {fileID: 0}
   SoundOff: {fileID: 0}
 --- !u!4 &242977722
