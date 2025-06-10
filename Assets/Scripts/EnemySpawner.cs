@@ -11,7 +11,6 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
-    [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private int maxWaves = 5;
 
     [Header("Events")]
@@ -77,15 +76,12 @@ public class EnemySpawner : MonoBehaviour
     {
         float timer = 0f;
 
-        while (timer < timeBetweenWaves)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
+        timer += Time.deltaTime;
 
         isSpawning = true;
         SetupWave(currentWave);
         UpdateWaveUI();
+        yield return null;
     }
 
     private void EndWave()
@@ -117,13 +113,11 @@ public class EnemySpawner : MonoBehaviour
             case 2:
                 for (int i = 0; i < 10; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < 5; i++) enemiesToSpawn.Add(1);
-                Shuffle(enemiesToSpawn);
                 break;
             case 3:
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(1);
                 for (int i = 0; i < 8; i++) enemiesToSpawn.Add(2);
-                Shuffle(enemiesToSpawn);
                 break;
             case 5:
                 enemiesToSpawn.Add(3); // Ex: Boss
@@ -137,7 +131,6 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < normalCount; i++) enemiesToSpawn.Add(0);
                 for (int i = 0; i < fastCount; i++) enemiesToSpawn.Add(1);
                 for (int i = 0; i < tankCount; i++) enemiesToSpawn.Add(2);
-                Shuffle(enemiesToSpawn);
                 break;
         }
     }
@@ -159,16 +152,6 @@ public class EnemySpawner : MonoBehaviour
         totalEnemiesAlive++;
     }
 
-    private void Shuffle(List<int> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            int randomIndex = Random.Range(i, list.Count);
-            int temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
-    }
 
     private void UpdateWaveUI()
     {
