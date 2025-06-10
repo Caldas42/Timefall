@@ -1,16 +1,32 @@
 using UnityEngine;
+using TMPro;
 
 public class LevelController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [Header("References")]
+    [SerializeField] TextMeshProUGUI currencyUI;
+    [SerializeField] TextMeshProUGUI remainingLivesUI;
+
+    private bool isFast = false;
+
+    void OnGUI()
     {
-        
+        currencyUI.text = LevelManager.main.currency.ToString();
+        remainingLivesUI.text = LevelManager.main.remainingLives.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleSpeed()
     {
-        
+        if (isFast)
+        {
+            Time.timeScale = 1f;
+            isFast = false;
+        }
+        else
+        {
+            Time.timeScale = 2f;
+            isFast = true;
+        }
     }
 }
