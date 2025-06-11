@@ -50,6 +50,8 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
                 GameObject finalTower = Instantiate(towerData.prefab, plot.transform.position, Quaternion.identity);
                 finalTower.GetComponent<Turret>().SetCanShoot(true);
+
+                plot.PlaceTower(finalTower);
             }
             else
             {

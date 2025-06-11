@@ -8,19 +8,15 @@ public class Plot : MonoBehaviour
     private GameObject Troop;
     private Color startColor;
 
-    // Adicionando a variável para verificar se o plot é colocável
-    public bool isPlaceable = true; // Define se o plot é colocável ou não
+    public bool isPlaceable = true;
 
-    private Collider2D plotCollider; // Referência para o Collider2D
+    private Collider2D plotCollider;
 
     private void Start()
     {
         startColor = sr.color;
-
-        // Obter o Collider2D do plot
         plotCollider = GetComponent<Collider2D>();
 
-        // Se o plot não for colocável, desabilitar o collider
         if (!isPlaceable && plotCollider != null)
         {
             plotCollider.enabled = false;
@@ -29,7 +25,6 @@ public class Plot : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        // Só muda a cor de hover se o plot for colocável
         if (isPlaceable)
         {
             sr.color = hoverColor;
@@ -41,30 +36,14 @@ public class Plot : MonoBehaviour
         sr.color = startColor;
     }
 
-    // Removendo a funcionalidade de clique
-    /*private void OnMouseDown()
+    public void PlaceTower(GameObject tower)
     {
-        // Verifica se o plot é colocável antes de permitir qualquer ação
-        if (!isPlaceable)
+        Troop = tower;
+        isPlaceable = false;
+
+        if (plotCollider != null)
         {
-            Debug.Log("Este plot não é colocável!");
-            return;
+            plotCollider.enabled = false;
         }
-
-        // Se já houver uma torre, não permite colocar outra
-        if (Troop != null) return;
-
-        Tower TroopToBuild = BuildManager.main.GetSelectedTroop();
-
-        if (TroopToBuild.cost > LevelManager.main.currency)
-        {
-            Debug.Log("Você não tem moeda suficiente para colocar esta torre.");
-            return;
-        }
-
-        LevelManager.main.SpendCurrency(TroopToBuild.cost);
-
-        // Instancia a torre no plot
-        Troop = Instantiate(TroopToBuild.prefab, transform.position, Quaternion.identity);
-    }*/
+    }
 }
