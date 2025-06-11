@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5572e0e38d82206408f5a90f26933939
+guid: f21199b539adbb44ab925244821a2c4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3598552234264894592
-    second: EnergySprite_0
-  - first:
-      213: 4084908799985137690
-    second: EnergySprite_1
+      213: -2966830168899226828
+    second: MoedaTemporal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnergySprite_0
+      name: MoedaTemporal_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 1311
-        width: 1586
-        height: 322
+        x: 127
+        y: 143
+        width: 258
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08c1c0de030a0f130800000000000000
-      internalID: 3598552234264894592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnergySprite_1
-      rect:
-        serializedVersion: 2
-        x: 1807
-        y: 1343
-        width: 162
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a183bfa29e280b830800000000000000
-      internalID: 4084908799985137690
+      spriteID: 43379d92ea3b3d6d0800000000000000
+      internalID: -2966830168899226828
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EnergySprite_0: 3598552234264894592
-      EnergySprite_1: 4084908799985137690
+      MoedaTemporal_0: -2966830168899226828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

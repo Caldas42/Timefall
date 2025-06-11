@@ -7,10 +7,19 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public Transform startPoint;
     public Transform[] path;
+    [SerializeField] private int currency = 80;
+    [SerializeField] private int remainingLives = 20;
+    [SerializeField] private LevelController levelController;
 
-    public int currency = 100;
-    public int remainingLives = 20;
-    [SerializeField] private UIManager uIManager;
+    public int getCurrency()
+    {
+        return currency;
+    }
+
+    public int getRemainingLives()
+    {
+        return remainingLives;
+    }
 
     private void Awake()
     {
@@ -29,27 +38,22 @@ public class LevelManager : MonoBehaviour
             currency -= amount;
             return true;
         }
-        else
-        {
-            Debug.Log("You do not have enough to purchase this item");
-            return false;
-        }
+
+        return false;
     }
 
     public void DamagePlayer(int amount)
     {
-
         remainingLives -= amount;
 
         if (remainingLives <= 0)
         {
-            uIManager.OpenGameOverPanel();
+            levelController.OpenGameOverPanel();
         }
-
     }
+
     public void Victory()
     {
-        uIManager.OpenWinPanel();
+        levelController.OpenWinPanel();
     }
-    
 }

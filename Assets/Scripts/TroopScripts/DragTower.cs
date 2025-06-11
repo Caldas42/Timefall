@@ -17,7 +17,7 @@ private void Start()
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (towerData == null || towerData.cost > LevelManager.main.currency)
+        if (towerData == null || towerData.cost > LevelManager.main.getCurrency())
         {
             Debug.Log("Sem torre ou sem moeda.");
             return;
@@ -46,7 +46,7 @@ private void Start()
         if (hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable)
         {
             Tower selectedTower = BuildManager.main.GetSelectedTroop();
-            if (selectedTower.cost <= LevelManager.main.currency)
+            if (selectedTower.cost <= LevelManager.main.getCurrency())
             {
                 LevelManager.main.SpendCurrency(selectedTower.cost);
 

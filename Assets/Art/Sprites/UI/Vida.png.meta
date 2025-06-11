@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c1c3d86feb36174f8c460b16559cb25
+guid: ff676efc69d29b1459d311bb6842bd8a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8771599448603991973
-    second: TROPAS_0
+      213: 5398230693474030073
+    second: Vida_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TROPAS_0
+      name: Vida_0
       rect:
         serializedVersion: 2
-        x: 1590
-        y: 0
-        width: 330
-        height: 1080
+        x: 127
+        y: 143
+        width: 258
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5062f186c4054680800000000000000
-      internalID: -8771599448603991973
+      spriteID: 9f15124f63e5aea40800000000000000
+      internalID: 5398230693474030073
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TROPAS_0: -8771599448603991973
+      Vida_0: 5398230693474030073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
