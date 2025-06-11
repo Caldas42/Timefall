@@ -15,19 +15,11 @@ public class MusicAndSFXManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 1);
+        }
 
-            if (volumeSliderMusic != null)
-            {
-                volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
-            }
-        }
-        else
-        {
-            if (volumeSliderMusic != null)
-            {
-                volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
-            }
-        }
+        volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
+        AudioListener.volume = volumeSliderMusic.value;
+        musicVolumePercentage.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
     }
 
     public void MusicOnOff()
@@ -36,13 +28,15 @@ public class MusicAndSFXManager : MonoBehaviour
 
         if (ButtonState)
         {
+            volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
             AudioListener.volume = volumeSliderMusic.value;
             musicVolumePercentage.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
         }
         else
         {
             AudioListener.volume = 0;
-            musicVolumePercentage.text = Mathf.RoundToInt(volumeSliderMusic.value * 0) + "%";
+            volumeSliderMusic.value = 0;
+            musicVolumePercentage.text = "0%";
         }
     }
 
@@ -50,6 +44,6 @@ public class MusicAndSFXManager : MonoBehaviour
     {
         AudioListener.volume = volumeSliderMusic.value;
         musicVolumePercentage.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
+        PlayerPrefs.SetFloat("MusicVolume", volumeSliderMusic.value);
     }
-    
 }

@@ -32,6 +32,11 @@ public class MainMenuController : MonoBehaviour
         ExitPanel.SetActive(true);
 
         MapPanel.SetActive(false);
-        SettingsPanel.SetActive(false); 
+        SettingsPanel.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
