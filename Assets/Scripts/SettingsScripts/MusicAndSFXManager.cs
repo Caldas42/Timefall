@@ -13,14 +13,10 @@ public class MusicAndSFXManager : MonoBehaviour
 
     void Start()
     {
-        /*
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 1);
         }
-        */
-
-        PlayerPrefs.SetFloat("MusicVolume", 1);
 
         volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
         AudioListener.volume = volumeSliderMusic.value;
