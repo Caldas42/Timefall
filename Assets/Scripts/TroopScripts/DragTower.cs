@@ -44,8 +44,7 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         if (hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable)
         {
-            Tower selectedTower = BuildManager.main.GetSelectedTroop();
-            if (selectedTower.cost <= LevelManager.main.getCurrency())
+            if (towerData.cost <= LevelManager.main.getCurrency())
             {
                 LevelManager.main.SpendCurrency(towerData.cost);
 
