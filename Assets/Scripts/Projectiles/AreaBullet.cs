@@ -18,7 +18,7 @@ public class AreaBullet : Bullet
         int i = 0;
 
         while (i < hits.Length) {
-            hits[i].gameObject.GetComponent<Health>().TakeDamage(getBulletDamage());
+            hits[i].gameObject.GetComponent<Health>().TakeDamage(GetBulletDamage());
             i++;
         }
     }

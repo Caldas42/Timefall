@@ -11,19 +11,29 @@ public class Bullet : MonoBehaviour
 
     private Transform target;
 
-    public void SetTarget(Transform _target) {
+    public void SetTarget(Transform _target)
+    {
         target = _target;
     }
 
-    protected float getBulletDamage() {
+    protected float GetBulletDamage()
+    {
         return bulletDamage;
     }
 
     private void FixedUpdate()
     {
-        if(target) { 
-            Vector2 direction = (target.position - transform.position).normalized;
-            rb.linearVelocity = direction * bulletSpeed;
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
         }
+
+        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
+        rb.linearVelocity = direction * bulletSpeed;
+
+        // Faz a rotação da bala para apontar na direção
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle; // isso rotaciona o corpo 2D
     }
 }
