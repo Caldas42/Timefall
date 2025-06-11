@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TowerDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private GameObject previewTower;
     private Tower towerData;
     private Camera cam;
 
-private void Start()
-{
-    cam = Camera.main;
-    var ui = GetComponent<TowerButtonUI>();
-    towerData = BuildManager.main.GetTowerByIndex(ui.towerIndex);
-    BuildManager.main.SetSelectedTower(ui.towerIndex);
-}
+    private void Start()
+    {
+        cam = Camera.main;
+        var ui = GetComponent<TowerButtonUI>();
+        towerData = BuildManager.main.GetTowerByIndex(ui.towerIndex);
+        // Removido: BuildManager.main.SetSelectedTower(ui.towerIndex);
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -45,12 +45,11 @@ private void Start()
 
         if (hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable)
         {
-            Tower selectedTower = BuildManager.main.GetSelectedTroop();
-            if (selectedTower.cost <= LevelManager.main.currency)
+            if (towerData.cost <= LevelManager.main.currency)
             {
-                LevelManager.main.SpendCurrency(selectedTower.cost);
+                LevelManager.main.SpendCurrency(towerData.cost);
 
-                GameObject finalTower = Instantiate(selectedTower.prefab, plot.transform.position, Quaternion.identity);
+                GameObject finalTower = Instantiate(towerData.prefab, plot.transform.position, Quaternion.identity);
                 finalTower.GetComponent<Turret>().SetCanShoot(true);
             }
             else
