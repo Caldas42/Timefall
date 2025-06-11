@@ -5236,6 +5236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 545488126}
   remainingLivesUI: {fileID: 301675114}
+  speedText: {fileID: 596591896}
 --- !u!4 &285807004
 Transform:
   m_ObjectHideFlags: 0
@@ -10680,7 +10681,6 @@ MonoBehaviour:
   - {fileID: 6587219627160654117, guid: 26b3eb13e538e0b4bb4d477c178ea67f, type: 3}
   - {fileID: 6587219627160654117, guid: 930f9a98d744663469a605a4231b839c, type: 3}
   enemiesPerSecond: 0.25
-  timeBetweenWaves: 0
   maxWaves: 5
   waveCounter: {fileID: 752880931}
 --- !u!114 &618250662
@@ -31104,6 +31104,7 @@ GameObject:
   - component: {fileID: 1771928147}
   - component: {fileID: 1771928146}
   - component: {fileID: 1771928145}
+  - component: {fileID: 1771928148}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -31225,6 +31226,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771928143}
   m_CullTransparentMesh: 1
+--- !u!114 &1771928148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771928143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecfa72da67da3945b130d3a001c9684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyUI: {fileID: 545488126}
+  remainingLivesUI: {fileID: 301675114}
+  speedText: {fileID: 596591896}
 --- !u!4 &1775385280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
