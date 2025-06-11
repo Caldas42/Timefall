@@ -24,10 +24,21 @@ public class BuildManager : MonoBehaviour
         return towers[selectedtroop];
     }
 
-    public void SetSelectedTower(int _selectedTower)
+public void SetSelectedTower(int _selectedTower)
+{
+    Tower tower = GetTowerByIndex(_selectedTower);
+
+    if (tower == null)
+        return;
+
+    if (tower.cost > LevelManager.main.currency)
     {
-        selectedtroop = _selectedTower;
+        Debug.Log("Você não tem moedas suficientes para selecionar esta tropa.");
+        return;
     }
+
+    selectedtroop = _selectedTower;
+}
 
     internal Tower GetTowerByIndex(int index)
     {
