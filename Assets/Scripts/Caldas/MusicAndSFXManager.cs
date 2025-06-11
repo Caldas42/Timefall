@@ -2,9 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SettingsManager : MonoBehaviour
+public class MusicAndSFXManager : MonoBehaviour
 {
-    [Header("Music & Sound")]
     [SerializeField] private AudioSource Music;
     [SerializeField] private Slider volumeSliderMusic;
     [SerializeField] private TMP_Text musicVolumePercentage;
