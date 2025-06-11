@@ -32,5 +32,10 @@ public class LevelController : MonoBehaviour
         PlayerPrefs.Save();
         speedText.text = Time.timeScale == 1f ? "2X" : "1X";
     }
+
+    public float GetGameSpeed()
+    {
+        return PlayerPrefs.GetFloat("GameSpeed", 1f);
+    }
     
 }

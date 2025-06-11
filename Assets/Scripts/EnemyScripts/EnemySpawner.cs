@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
 {
     if (!isSpawning && totalEnemiesAlive <= 0)
     {
-        Time.timeScale = 1f;
+        Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
         StartCoroutine(StartWave());
     }
 }
