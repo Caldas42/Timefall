@@ -10961,7 +10961,7 @@ MonoBehaviour:
   - {fileID: 579759321}
   - {fileID: 193794002}
   - {fileID: 1852464392}
-  currency: 80
+  currency: 999
   remainingLives: 20
   levelController: {fileID: 618250666}
 --- !u!114 &618250661
