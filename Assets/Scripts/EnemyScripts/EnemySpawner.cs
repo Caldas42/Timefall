@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI waveCounter;
+    [SerializeField] private Slider autoStartSlider;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -29,11 +31,15 @@ public class EnemySpawner : MonoBehaviour
     private int normalEnemyCount = 10;
     private int fastEnemyCount = 10;
     private int tankEnemyCount = 12;
-    
+
     private void Start()
     {
         Time.timeScale = 0f;
 
+        if (autoStartSlider != null && autoStartSlider.value >= 1f)
+        {
+            StartCoroutine(StartAutoSpawn());
+        }
     }
 
     private void Awake()
@@ -42,16 +48,22 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void OnPlayButtonPressed()
-{
-    if (!isSpawning && totalEnemiesAlive <= 0)
     {
-        Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
-        StartCoroutine(StartWave());
+        if (!isSpawning && totalEnemiesAlive <= 0)
+        {
+            Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
+            StartCoroutine(StartWave());
+        }
     }
-}
 
     private void Update()
     {
+        if (!isSpawning && autoStartSlider != null && autoStartSlider.value >= 1f && totalEnemiesAlive <= 0)
+        {
+            Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
+            StartCoroutine(StartWave());
+        }
+
         if (!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
@@ -98,11 +110,17 @@ public class EnemySpawner : MonoBehaviour
         yield return null;
     }
 
+    private IEnumerator StartAutoSpawn()
+    {
+        yield return new WaitForSeconds(0f);
+        Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
+        StartCoroutine(StartWave());
+    }
+
     private void EndWave()
     {
         isSpawning = false;
     }
-
 
     private void SetupWave(int wave)
     {
@@ -158,7 +176,6 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(prefab, LevelManager.main.startPoint.position, Quaternion.identity);
         totalEnemiesAlive++;
     }
-
 
     private void UpdateWaveUI()
     {
