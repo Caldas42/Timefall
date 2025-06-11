@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4ea742541cf3a6c4abeca7877da633f6
+guid: 78b254ce16d21b24389de9184c74eb2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5580325150330590275
-    second: VIDASRODADA_0
+      213: 2349104228667194892
+    second: Slot de tropa_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VIDASRODADA_0
+      name: Slot de tropa_0
       rect:
         serializedVersion: 2
-        x: 778
-        y: 445
-        width: 364
-        height: 190
+        x: 0
+        y: 0
+        width: 209
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34412ac882c417d40800000000000000
-      internalID: 5580325150330590275
+      spriteID: c0e731299d1b99020800000000000000
+      internalID: 2349104228667194892
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VIDASRODADA_0: 5580325150330590275
+      Slot de tropa_0: 2349104228667194892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

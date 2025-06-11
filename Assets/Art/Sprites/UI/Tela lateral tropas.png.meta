@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2f91a95b7ed60554b8e6ad10c348b42d
+guid: 5dc0c530e3eb36b4f8714fa896c21860
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7932932604702008127
-    second: Untitled 05-23-2025 09-44-41_0
-  - first:
-      213: 2284545980326641696
-    second: Untitled 05-23-2025 09-44-41_1
+      213: -6918856992219283746
+    second: Tela lateral tropas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ProfileButton
+      name: Tela lateral tropas_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 391
-        width: 162
-        height: 162
+        x: 31
+        y: 0
+        width: 930
+        height: 1585
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cc5f9593df88e190800000000000000
-      internalID: -7932932604702008127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProfileButtonPressed
-      rect:
-        serializedVersion: 2
-        x: 543
-        y: 391
-        width: 162
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0208a6e077654bf10800000000000000
-      internalID: 2284545980326641696
+      spriteID: edeba0729384bff90800000000000000
+      internalID: -6918856992219283746
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 86b85e38d1a8c384f9932f2d17925d83
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ProfileButton: -7932932604702008127
-      ProfileButtonPressed: 2284545980326641696
+      Tela lateral tropas_0: -6918856992219283746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
