@@ -29,12 +29,12 @@ public class EnemySpawner : MonoBehaviour
     private int normalEnemyCount = 10;
     private int fastEnemyCount = 10;
     private int tankEnemyCount = 12;
-
+    
     private void Start()
-{
-    Time.timeScale = 0f;
+    {
+        Time.timeScale = 0f;
 
-}
+    }
 
     private void Awake()
     {
@@ -91,12 +91,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator StartWave()
     {
-
-
-
         SetupWave(currentWave);
         UpdateWaveUI();
-
         isSpawning = true;
         timeSinceLastSpawn = 0f;
         yield return null;
