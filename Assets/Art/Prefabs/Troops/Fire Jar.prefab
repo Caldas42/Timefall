@@ -161,7 +161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5810214309050244863}
   - component: {fileID: 1443133707498042333}
-  - component: {fileID: 1006091115365072152}
   m_Layer: 0
   m_Name: Fire Jar
   m_TagString: Untagged
@@ -208,19 +207,6 @@ MonoBehaviour:
   targetingRange: 1.2
   rotationSpeed: 200
   bps: 2.5
---- !u!114 &1006091115365072152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238912390334813594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f74293901da7f874f82201cd0ffd39b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangeIndicator: {fileID: 7300146790097700324}
 --- !u!1 &7300146790097700324
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2494705216108256235}
   - component: {fileID: 4486281130879088291}
+  - component: {fileID: 4538153840525494256}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -384,7 +371,7 @@ SpriteRenderer:
   m_SortingLayerID: -193117085
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 941078575961034377, guid: 3bef53e6d666d3e4e8249d17e4033a37, type: 3}
+  m_Sprite: {fileID: 7480478280200432616, guid: 12fdf52744029b4439ebbbd5efe324fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -395,3 +382,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4538153840525494256
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858222251921420464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ebb0a26efa9126459e11a3102f43d35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
