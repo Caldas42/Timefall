@@ -26,7 +26,7 @@ public class SynergyBullet : Bullet
             if (enemyHealth != null)
             {
                 // Aplica dano imediato (como AreaBullet)
-                enemyHealth.TakeDamage(getBulletDamage());
+                enemyHealth.TakeDamage(GetBulletDamage());
 
                 // Aplica efeito burn (como BurnBullet)
                 enemyHealth.ApplyBurn(synergyBurnDamagePerSecond, synergyBurnDuration);

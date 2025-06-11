@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: fbdfd812a25ad6f4aaae2d1991f4256e
+guid: 12fdf52744029b4439ebbbd5efe324fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2197672003421536830
-    second: Flecha_0
+      213: 7480478280200432616
+    second: JarroDeFogo_0
+  - first:
+      213: -3423358628469633968
+    second: JarroDeFogo_1
+  - first:
+      213: 8165321398422399855
+    second: JarroDeFogo_2
+  - first:
+      213: 2366971105317395124
+    second: JarroDeFogo_3
+  - first:
+      213: 8202490330990152639
+    second: JarroDeFogo_4
+  - first:
+      213: -7464700900806061354
+    second: JarroDeFogo_5
+  - first:
+      213: -6283567851716114645
+    second: JarroDeFogo_6
+  - first:
+      213: 8928808861132785541
+    second: JarroDeFogo_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +121,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flecha_0
+      name: JarroDeFogo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 47
-        width: 160
-        height: 50
+        x: 72
+        y: 784
+        width: 440
+        height: 747
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cdfc37e4fc4081e0800000000000000
-      internalID: -2197672003421536830
+      spriteID: 8eb2f51dc5fffc760800000000000000
+      internalID: 7480478280200432616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JarroDeFogo_1
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 784
+        width: 471
+        height: 747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c8c431779cd70d0800000000000000
+      internalID: -3423358628469633968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JarroDeFogo_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 784
+        width: 499
+        height: 747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6becd5dc8c015170800000000000000
+      internalID: 8165321398422399855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JarroDeFogo_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 784
+        width: 420
+        height: 747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08f6fb2c27e5d74aad52357878d9de8
+      internalID: 2366971105317395124
       vertices: []
       indices: 
       edges: []
@@ -125,7 +212,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1356ab4805a3d754c99bf9591d16b5f1
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +222,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flecha_0: -2197672003421536830
+      JarroDeFogo_0: 7480478280200432616
+      JarroDeFogo_1: -3423358628469633968
+      JarroDeFogo_2: 8165321398422399855
+      JarroDeFogo_3: 2366971105317395124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

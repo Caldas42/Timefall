@@ -14,7 +14,8 @@ public class Turret : MonoBehaviour
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f; // Bullets Per Second
 
-    private Transform target;
+    protected Transform target;
+
     private float timeUntilFire;
 
     // --- Sinergia ---
@@ -25,7 +26,7 @@ public class Turret : MonoBehaviour
 
     private bool canShoot = true;
 
-    private void Update()
+    protected virtual void Update()
     {
         if (!canShoot) return;
 
@@ -71,7 +72,7 @@ public class Turret : MonoBehaviour
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    private bool CheckTargetIsInRange()
+    protected bool CheckTargetIsInRange()
     {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
