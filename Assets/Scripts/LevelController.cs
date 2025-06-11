@@ -1,41 +1,78 @@
+using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] TextMeshProUGUI currencyUI;
-    [SerializeField] TextMeshProUGUI remainingLivesUI;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI remainingLivesText;
+    [SerializeField] private TextMeshProUGUI currencyText;
     [SerializeField] private TextMeshProUGUI speedText;
 
-    private bool isFast = false;
+    [Header("Panels")]
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject winPanel;
+
+    private float gameSpeed = 1f;
+
+    public float GetGameSpeed()
+    {
+        return PlayerPrefs.GetFloat("GameSpeed", 1f);
+    }
 
     void OnGUI()
     {
-        currencyUI.text = LevelManager.main.currency.ToString();
-        remainingLivesUI.text = LevelManager.main.remainingLives.ToString();
+        currencyText.text = LevelManager.main.getCurrency().ToString();
+        remainingLivesText.text = LevelManager.main.getRemainingLives().ToString();
     }
 
     public void ToggleSpeed()
     {
-        if (isFast)
+        if (gameSpeed == 1f)
         {
-            Time.timeScale = 1f;
-            isFast = false;
+            gameSpeed = 2f;
         }
         else
         {
-            Time.timeScale = 2f;
-            isFast = true;
+            gameSpeed = 1f;
         }
+
+        Time.timeScale = gameSpeed;
+
         PlayerPrefs.SetFloat("GameSpeed", Time.timeScale);
         PlayerPrefs.Save();
         speedText.text = Time.timeScale == 1f ? "2X" : "1X";
     }
 
-    public float GetGameSpeed()
+    public void CallScene(String scene)
     {
-        return PlayerPrefs.GetFloat("GameSpeed", 1f);
+        SceneManager.LoadScene(scene);
+    }
+    
+    public void OpenSettingsPanel()
+    {
+        settingsPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void CloseSettingsPanel()
+    {
+        settingsPanel.SetActive(false);
+        Time.timeScale = PlayerPrefs.GetFloat("GameSpeed", 1f);
+    }
+
+    public void OpenGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void OpenWinPanel()
+    {
+        winPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
     
 }

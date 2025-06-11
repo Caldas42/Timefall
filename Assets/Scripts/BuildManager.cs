@@ -28,15 +28,14 @@ public class BuildManager : MonoBehaviour
     {
         Tower tower = GetTowerByIndex(_selectedTower);
 
-        if (tower == null)
-            return;
+        if (tower == null) return;
 
-        if (tower.cost > LevelManager.main.currency)
+        if (tower.cost > LevelManager.main.getCurrency())
         {
             Debug.Log("Você não tem moedas suficientes para selecionar esta tropa.");
             return;
         }
-
+        
         selectedtroop = _selectedTower;
     }
 

@@ -12,12 +12,11 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         cam = Camera.main;
         var ui = GetComponent<TowerButtonUI>();
         towerData = BuildManager.main.GetTowerByIndex(ui.towerIndex);
-        // Removido: BuildManager.main.SetSelectedTower(ui.towerIndex);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (towerData == null || towerData.cost > LevelManager.main.currency)
+        if (towerData == null || towerData.cost > LevelManager.main.getCurrency())
         {
             Debug.Log("Sem torre ou sem moeda.");
             return;
@@ -45,7 +44,8 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         if (hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable)
         {
-            if (towerData.cost <= LevelManager.main.currency)
+            Tower selectedTower = BuildManager.main.GetSelectedTroop();
+            if (selectedTower.cost <= LevelManager.main.getCurrency())
             {
                 LevelManager.main.SpendCurrency(towerData.cost);
 
