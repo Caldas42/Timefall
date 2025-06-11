@@ -11,7 +11,6 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
-    [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private int maxWaves = 9;
 
     [Header("Events")]
@@ -92,18 +91,15 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator StartWave()
     {
-        float timer = 0f;
-        while (timer < timeBetweenWaves)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
+
+
 
         SetupWave(currentWave);
         UpdateWaveUI();
-        
+
         isSpawning = true;
         timeSinceLastSpawn = 0f;
+        yield return null;
     }
 
     private void EndWave()
