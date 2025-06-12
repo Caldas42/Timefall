@@ -25,6 +25,10 @@ public class EnemySpawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private bool isSpawning = false;
 
+    [SerializeField] private LevelController levelController;
+    [SerializeField] private LevelManager levelManager;
+
+
     private List<int> enemiesToSpawn = new List<int>();
     private int totalEnemiesAlive;
 
@@ -34,6 +38,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        if (levelManager.GetRemainingLives() <= 0)
+        {
+            Time.timeScale = 0f;
+            levelController.OpenGameOverPanel();
+            return;
+        }
         Time.timeScale = 0f;
 
         if (autoStartSlider != null && autoStartSlider.value >= 1f)

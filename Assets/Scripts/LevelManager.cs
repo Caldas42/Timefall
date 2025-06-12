@@ -61,9 +61,14 @@ public class LevelManager : MonoBehaviour
     {
         levelController.OpenWinPanel();
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectile");
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
+        foreach (GameObject bullet in bullets)
+        {
+            Destroy(bullet);
+        }
+    }
+    
+    public int GetRemainingLives()
+    {
+        return remainingLives;
     }
 }
