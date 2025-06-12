@@ -14,7 +14,6 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject winPanel;
-
     [SerializeField] private GameObject BackwinPanel;
     [SerializeField] private GameObject BackLosePanel;
 
@@ -87,8 +86,6 @@ public class LevelController : MonoBehaviour
         BackwinPanel.SetActive(false);
         Time.timeScale = 0f;
     }
-
-
     
     public void CloseWinPanel()
     {
