@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEditor;
 
 public class Turret : MonoBehaviour
 {
@@ -8,27 +7,36 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+    [SerializeField] private GameObject rangeIndicator;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 3f;
     [SerializeField] private float rotationSpeed = 200f;
-    [SerializeField] private float bps = 1f; // Bullets Per Second
+    [SerializeField] private float bps = 1f;
 
     protected Transform target;
-
     private float timeUntilFire;
 
     // --- Sinergia ---
     private GameObject synergyBulletPrefab;
     private bool synergyActive = false;
-
-    private bool isSinergia = false;  // ✅ NOVA VARIÁVEL
-
+    private bool isSinergia = false;
     private bool canShoot = true;
+
+    private bool isPlaced = false;
+
+    private void Start()
+    {
+        if (rangeIndicator != null)
+        {
+            rangeIndicator.transform.localScale = Vector3.one * targetingRange * 2f;
+            rangeIndicator.SetActive(false);
+        }
+    }
 
     protected virtual void Update()
     {
-        if (!canShoot) return;
+        if (!canShoot || !isPlaced) return;
 
         if (target == null)
         {
@@ -68,7 +76,6 @@ public class Turret : MonoBehaviour
     {
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
@@ -112,9 +119,37 @@ public class Turret : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.Handles.color = Color.cyan;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    #endif
+#endif
     }
+
+
+    public void ShowRangeIndicator(bool value)
+    {
+        if (rangeIndicator != null)
+        {
+            rangeIndicator.SetActive(value);
+        }
+    }
+
+    public void SetPlaced(bool placed)
+    {
+        isPlaced = placed;
+        if (rangeIndicator != null)
+            rangeIndicator.SetActive(!placed);
+    }
+    public void OnSelect()
+{
+    ShowRangeIndicator(true);
+    SetCanShoot(false);
+}
+
+public void OnPlace()
+{
+    ShowRangeIndicator(false);
+    SetCanShoot(true);
+    SetPlaced(true);
+}
 }
