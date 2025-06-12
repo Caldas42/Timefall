@@ -24,6 +24,8 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         previewTower = Instantiate(towerData.prefab);
         previewTower.GetComponent<Turret>().SetCanShoot(false);
+        previewTower.GetComponent<Turret>().SetPlaced(false);
+        previewTower.GetComponent<Turret>().ShowRangeIndicator(true);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -49,7 +51,10 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 LevelManager.main.SpendCurrency(towerData.cost);
 
                 GameObject finalTower = Instantiate(towerData.prefab, plot.transform.position, Quaternion.identity);
-                finalTower.GetComponent<Turret>().SetCanShoot(true);
+                var turret = finalTower.GetComponent<Turret>();
+                turret.SetCanShoot(true);
+                turret.SetPlaced(true);
+                turret.ShowRangeIndicator(false);
 
                 plot.PlaceTower(finalTower);
             }
@@ -60,5 +65,6 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
 
         Destroy(previewTower);
+        previewTower = null;
     }
 }
