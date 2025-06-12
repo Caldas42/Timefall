@@ -38,25 +38,27 @@ public class EnemySpawner : MonoBehaviour
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-    private void Start()
+private void Start()
+{
+    Time.timeScale = 0f;
+
+    bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
+
+    if (autoStartToggle != null)
     {
-        Time.timeScale = 0f;
-
-        isInitializingToggle = true;
-        bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
-        if (autoStartToggle != null)
-        {
-            autoStartToggle.isOn = autoStartEnabled;
-        }
-        isInitializingToggle = false;
-
-        Debug.Log("AutoStart carregado: " + autoStartEnabled);
-
-        if (autoStartEnabled && currentWave > 1)
-        {
-            StartCoroutine(StartAutoSpawn());
-        }
+        autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
+        autoStartToggle.isOn = autoStartEnabled;
+        autoStartToggle.onValueChanged.AddListener(OnAutoStartToggleChanged);
     }
+
+    Debug.Log("AutoStart carregado: " + autoStartEnabled);
+
+    if (autoStartEnabled && currentWave > 1)
+    {
+        StartCoroutine(StartAutoSpawn());
+    }
+}
+
 
     public void OnPlayButtonPressed()
     {
