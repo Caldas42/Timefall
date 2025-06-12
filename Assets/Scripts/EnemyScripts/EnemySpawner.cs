@@ -9,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private LevelManager levelManager;
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
@@ -20,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI waveCounter;
-    [SerializeField] private Slider autoStartSlider;
+    [SerializeField] private Toggle autoStartToggle;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -35,15 +34,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        if (levelManager.GetRemainingLives() <= 0)
-        {
-            Time.timeScale = 0f;
-            levelManager.getLevelController().OpenGameOverPanel();
-            return;
-        }
         Time.timeScale = 0f;
 
-        if (autoStartSlider != null && autoStartSlider.value >= 1f)
+        if (autoStartToggle != null && autoStartToggle.isOn)
         {
             StartCoroutine(StartAutoSpawn());
         }
@@ -65,7 +58,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!isSpawning && autoStartSlider != null && autoStartSlider.value >= 1f && totalEnemiesAlive <= 0)
+        if (!isSpawning && autoStartToggle != null && autoStartToggle.isOn && totalEnemiesAlive <= 0)
         {
             Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
             StartCoroutine(StartWave());
@@ -104,11 +97,6 @@ public class EnemySpawner : MonoBehaviour
             {
                 currentWave++;
                 Time.timeScale = 0f;
-                GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectile");
-                foreach (GameObject bullet in bullets)
-                {
-                    Destroy(bullet);
-                }
             }
         }
     }
@@ -192,5 +180,14 @@ public class EnemySpawner : MonoBehaviour
     private void UpdateWaveUI()
     {
         waveCounter.text = currentWave + "/" + maxWaves;
+    }
+
+    // Esse método pode ser conectado no Inspector ao Toggle
+    public void OnAutoStartToggleChanged(bool isOn)
+    {
+        if (isOn && !isSpawning && totalEnemiesAlive <= 0)
+        {
+            StartCoroutine(StartAutoSpawn());
+        }
     }
 }
