@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projectile
+<<<<<<< HEAD
+=======
+  - Bullet
+>>>>>>> 931916315a57c9d63a2548d051c1a24a4eab3609
   layers:
   - Default
   - TransparentFX
