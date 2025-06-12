@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private bool isSpawning = false;
+    private bool isInitializingToggle = false;
 
     private List<int> enemiesToSpawn = new List<int>();
     private int totalEnemiesAlive;
@@ -32,19 +33,29 @@ public class EnemySpawner : MonoBehaviour
     private int fastEnemyCount = 10;
     private int tankEnemyCount = 12;
 
+    private void Awake()
+    {
+        onEnemyDestroy.AddListener(EnemyDestroyed);
+    }
+
     private void Start()
     {
         Time.timeScale = 0f;
 
-        if (autoStartToggle != null && autoStartToggle.isOn)
+        isInitializingToggle = true;
+        bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
+        if (autoStartToggle != null)
+        {
+            autoStartToggle.isOn = autoStartEnabled;
+        }
+        isInitializingToggle = false;
+
+        Debug.Log("AutoStart carregado: " + autoStartEnabled);
+
+        if (autoStartEnabled && currentWave > 1)
         {
             StartCoroutine(StartAutoSpawn());
         }
-    }
-
-    private void Awake()
-    {
-        onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
     public void OnPlayButtonPressed()
@@ -58,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!isSpawning && autoStartToggle != null && autoStartToggle.isOn && totalEnemiesAlive <= 0)
+        if (!isSpawning && currentWave > 1 && autoStartToggle != null && autoStartToggle.isOn && totalEnemiesAlive <= 0)
         {
             Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
             StartCoroutine(StartWave());
@@ -182,10 +193,16 @@ public class EnemySpawner : MonoBehaviour
         waveCounter.text = currentWave + "/" + maxWaves;
     }
 
-    // Esse método pode ser conectado no Inspector ao Toggle
     public void OnAutoStartToggleChanged(bool isOn)
     {
-        if (isOn && !isSpawning && totalEnemiesAlive <= 0)
+        if (isInitializingToggle) return;
+
+        Debug.Log("Toggle mudou para: " + isOn);
+        PlayerPrefs.SetInt("AutoStartEnabled", isOn ? 1 : 0);
+        PlayerPrefs.Save();
+        Debug.Log("PlayerPrefs salvo: AutoStartEnabled = " + PlayerPrefs.GetInt("AutoStartEnabled", 0));
+
+        if (isOn && currentWave > 1 && !isSpawning && totalEnemiesAlive <= 0)
         {
             StartCoroutine(StartAutoSpawn());
         }
