@@ -10135,7 +10135,7 @@ MonoBehaviour:
   - {fileID: 193794002}
   - {fileID: 1852464392}
   currency: 999
-  remainingLives: 0
+  remainingLives: 20
   levelController: {fileID: 618250666}
 --- !u!114 &618250661
 MonoBehaviour:
@@ -10154,8 +10154,9 @@ MonoBehaviour:
   - {fileID: 6587219627160654117, guid: eb1c0fb64854612449f497480d616e87, type: 3}
   - {fileID: 6587219627160654117, guid: 26b3eb13e538e0b4bb4d477c178ea67f, type: 3}
   - {fileID: 6587219627160654117, guid: 930f9a98d744663469a605a4231b839c, type: 3}
+  levelManager: {fileID: 618250660}
   enemiesPerSecond: 1
-  maxWaves: 1
+  maxWaves: 5
   waveCounter: {fileID: 752880931}
   autoStartSlider: {fileID: 1038533260}
 --- !u!114 &618250662

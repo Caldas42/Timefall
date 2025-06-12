@@ -21,6 +21,11 @@ public class LevelManager : MonoBehaviour
         return remainingLives;
     }
 
+    public LevelController getLevelController()
+    {
+        return levelController;
+    }
+
     private void Awake()
     {
         main = this;

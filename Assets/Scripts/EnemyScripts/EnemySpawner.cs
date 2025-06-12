@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private LevelManager levelManager;
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.25f;
@@ -25,10 +26,6 @@ public class EnemySpawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private bool isSpawning = false;
 
-    [SerializeField] private LevelController levelController;
-    [SerializeField] private LevelManager levelManager;
-
-
     private List<int> enemiesToSpawn = new List<int>();
     private int totalEnemiesAlive;
 
@@ -41,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
         if (levelManager.GetRemainingLives() <= 0)
         {
             Time.timeScale = 0f;
-            levelController.OpenGameOverPanel();
+            levelManager.getLevelController().OpenGameOverPanel();
             return;
         }
         Time.timeScale = 0f;

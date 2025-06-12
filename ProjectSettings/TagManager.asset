@@ -5,10 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projectile
-<<<<<<< HEAD
-=======
-  - Bullet
->>>>>>> 931916315a57c9d63a2548d051c1a24a4eab3609
   layers:
   - Default
   - TransparentFX
@@ -17,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - Bullet
+  - Projectile
   - 
   - 
   - 
@@ -48,15 +44,6 @@ TagManager:
     locked: 0
   - name: Troops
     uniqueID: 4101850211
-    locked: 0
-  - name: New Layer 2
-    uniqueID: 3067940891
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 4063497597
-    locked: 0
-  - name: New Layer 4
-    uniqueID: 1699347543
     locked: 0
   m_RenderingLayers:
   - Default
