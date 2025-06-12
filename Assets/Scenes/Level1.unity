@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 94127467}
   - component: {fileID: 94127466}
   m_Layer: 5
-  m_Name: Review
+  m_Name: ReviewMapButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5442996297376809615, guid: 6b8cd554a3b626145aaa3a0c1c009a46, type: 3}
+  m_Sprite: {fileID: 8633812608642945616, guid: 7546f1d68acba064db8ad916dcc09e80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12264,7 +12264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1254902, g: 0.5411765, b: 0.82745105, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16505,7 +16505,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000063447df41b10ddb67d0d34f257fc4965
+  m_ApplyToSortingLayers: 0000000063447df4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -21916,7 +21916,7 @@ GameObject:
   - component: {fileID: 1280684668}
   - component: {fileID: 1280684667}
   m_Layer: 5
-  m_Name: BackToMenuButton
+  m_Name: ReviewMapButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22017,7 +22017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2327428696606307035, guid: 8095aba5760e3384a95ede11a5cf666e, type: 3}
+  m_Sprite: {fileID: 8633812608642945616, guid: 7546f1d68acba064db8ad916dcc09e80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24370,7 +24370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
