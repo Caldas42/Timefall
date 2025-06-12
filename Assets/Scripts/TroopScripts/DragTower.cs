@@ -7,6 +7,8 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private Tower towerData;
     private Camera cam;
 
+    [SerializeField] private GameObject rangeIndicator;
+
     private void Start()
     {
         cam = Camera.main;
@@ -35,6 +37,12 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Vector3 worldPos = cam.ScreenToWorldPoint(Input.mousePosition);
         worldPos.z = 0f;
         previewTower.transform.position = worldPos;
+
+        Turret turret = previewTower.GetComponent<Turret>();
+        if (turret != null)
+        {
+            turret.ShowRangeIndicator(true);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
