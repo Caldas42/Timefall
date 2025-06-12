@@ -15,6 +15,10 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject winPanel;
 
+    [SerializeField] private GameObject BackwinPanel;
+    [SerializeField] private GameObject BackLosePanel;
+
+
     private float gameSpeed = 1f;
 
     public float GetGameSpeed()
@@ -50,7 +54,7 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
-    
+
     public void OpenSettingsPanel()
     {
         settingsPanel.SetActive(true);
@@ -66,13 +70,30 @@ public class LevelController : MonoBehaviour
     public void OpenGameOverPanel()
     {
         gameOverPanel.SetActive(true);
+        BackLosePanel.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void CloseGameOverPanel()
+    {
+        gameOverPanel.SetActive(false);
+        BackLosePanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void OpenWinPanel()
     {
         winPanel.SetActive(true);
+        BackwinPanel.SetActive(false);
         Time.timeScale = 0f;
     }
+
+
     
+    public void CloseWinPanel()
+    {
+        winPanel.SetActive(false);
+        BackwinPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }
