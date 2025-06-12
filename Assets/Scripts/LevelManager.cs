@@ -49,11 +49,21 @@ public class LevelManager : MonoBehaviour
         if (remainingLives <= 0)
         {
             levelController.OpenGameOverPanel();
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
         }
     }
 
     public void Victory()
     {
         levelController.OpenWinPanel();
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
     }
 }
