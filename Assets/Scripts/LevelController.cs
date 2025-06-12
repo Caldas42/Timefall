@@ -25,11 +25,18 @@ public class LevelController : MonoBehaviour
         return PlayerPrefs.GetFloat("GameSpeed", 1f);
     }
 
-    void OnGUI()
+void OnGUI()
+{
+    if (LevelManager.main != null)
     {
-        currencyText.text = LevelManager.main.getCurrency().ToString();
-        remainingLivesText.text = LevelManager.main.getRemainingLives().ToString();
+        if (currencyText != null)
+            currencyText.text = LevelManager.main.getCurrency().ToString();
+
+        if (remainingLivesText != null)
+            remainingLivesText.text = LevelManager.main.getRemainingLives().ToString();
     }
+}
+
 
     public void ToggleSpeed()
     {
