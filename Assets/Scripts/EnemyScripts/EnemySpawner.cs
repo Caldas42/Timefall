@@ -97,6 +97,11 @@ public class EnemySpawner : MonoBehaviour
             {
                 currentWave++;
                 Time.timeScale = 0f;
+                GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectile");
+                foreach (GameObject bullet in bullets)
+                {
+                    Destroy(bullet);
+                }
             }
         }
     }
