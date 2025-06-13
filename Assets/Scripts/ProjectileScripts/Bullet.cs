@@ -21,18 +21,19 @@ public class Bullet : MonoBehaviour
         return bulletDamage;
     }
 
-    private void FixedUpdate()
+private void FixedUpdate()
+{
+    if (target == null)
     {
-        if (target == null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
-        rb.linearVelocity = direction * bulletSpeed;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        Destroy(gameObject);
+        return;
     }
+
+    Vector2 direction = ((Vector2)target.position - (Vector2)transform.position).normalized;
+    rb.linearVelocity = direction * bulletSpeed;
+
+    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    rb.rotation = angle + 180f;
+}
+
 }
