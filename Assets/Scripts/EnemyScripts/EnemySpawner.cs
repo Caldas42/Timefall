@@ -23,6 +23,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Image startWaveButtonImage;
     [SerializeField] private Sprite startWaveButtonOnSprite;
     [SerializeField] private Sprite startWaveButtonOffSprite;
+    [SerializeField] private Image autoStartToggleImage;
+    [SerializeField] private Sprite autoStartToggleOnSprite;
+    [SerializeField] private Sprite autoStartToggleOffSprite;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -41,50 +44,41 @@ public class EnemySpawner : MonoBehaviour
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-private void Start()
-{
-    if (LevelManager.main.GetRemainingLives() <= 0)
+    private void Start()
     {
-        Time.timeScale = 0f;
-        LevelManager.main.getLevelController().OpenGameOverPanel();
-        return;
-    }
-
-    Time.timeScale = 0f;
-
-    autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
-    
-    bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
-    autoStartToggle.isOn = autoStartEnabled;
-
-    autoStartToggle.onValueChanged.AddListener(OnAutoStartToggleChanged);
-
-
-    if (autoStartEnabled && currentWave > 1)
-    {
-        StartCoroutine(StartAutoSpawn());
-    }
-}
-
-public class ToggleDebugger : MonoBehaviour
-{
-    private Toggle toggle;
-
-    private void Awake()
-    {
-        toggle = GetComponent<Toggle>();
-        toggle.onValueChanged.AddListener((val) => Debug.Log($"Toggle changed to {val}"));
-    }
-}
-
-
-    public void OnPlayButtonPressed()
-    {
-        if (!isSpawning && totalEnemiesAlive <= 0)
+        if (LevelManager.main.GetRemainingLives() <= 0)
         {
-            Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
-            StartCoroutine(StartWave());
+            Time.timeScale = 0f;
+            LevelManager.main.getLevelController().OpenGameOverPanel();
+            return;
         }
+
+        Time.timeScale = 0f;
+
+        autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
+
+        bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
+
+        autoStartToggle.isOn = autoStartEnabled;
+
+        if (autoStartEnabled)
+        {
+            autoStartToggleImage.sprite = autoStartToggleOnSprite;
+        }
+        else
+        {
+            autoStartToggleImage.sprite = autoStartToggleOffSprite;
+        }
+
+        autoStartToggle.onValueChanged.AddListener(OnAutoStartToggleChanged);
+
+
+        if (autoStartEnabled && currentWave > 1)
+        {
+            StartCoroutine(StartAutoSpawn());
+        }
+        
+        UpdatePlayButtonSprite();
     }
 
     private void Update()
@@ -95,15 +89,7 @@ public class ToggleDebugger : MonoBehaviour
             StartCoroutine(StartWave());
         }
 
-        if (!isSpawning)
-        {
-            startWaveButtonImage.sprite = startWaveButtonOnSprite;
-            return;
-        }
-        else
-        {
-            startWaveButtonImage.sprite = startWaveButtonOffSprite;
-        }
+        if (!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
 
@@ -122,22 +108,20 @@ public class ToggleDebugger : MonoBehaviour
         }
     }
 
-    private void EnemyDestroyed()
+    public void OnPlayButtonPressed()
     {
-        totalEnemiesAlive--;
-
-        if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
+        if (!isSpawning && totalEnemiesAlive <= 0)
         {
-            if (currentWave >= maxWaves)
-            {
-                LevelManager.main.Victory();
-            }
-            else
-            {
-                currentWave++;
-                Time.timeScale = 0f;
-            }
+            Time.timeScale = FindAnyObjectByType<LevelController>().GetGameSpeed();
+            StartCoroutine(StartWave());
         }
+    }
+
+    private void UpdatePlayButtonSprite()
+    {
+        startWaveButtonImage.sprite = isSpawning
+            ? startWaveButtonOffSprite 
+            : startWaveButtonOnSprite;
     }
 
     private IEnumerator StartWave()
@@ -145,6 +129,7 @@ public class ToggleDebugger : MonoBehaviour
         SetupWave(currentWave);
         UpdateWaveUI();
         isSpawning = true;
+        UpdatePlayButtonSprite();
         timeSinceLastSpawn = 0f;
         yield return null;
     }
@@ -156,9 +141,26 @@ public class ToggleDebugger : MonoBehaviour
         StartCoroutine(StartWave());
     }
 
-    private void EndWave()
+    public void OnAutoStartToggleChanged(bool isOn)
     {
-        isSpawning = false;
+        if (isInitializingToggle) return;
+
+        PlayerPrefs.SetInt("AutoStartEnabled", isOn ? 1 : 0);
+        PlayerPrefs.Save();
+
+        if (isOn)
+        {
+            autoStartToggleImage.sprite = autoStartToggleOnSprite;
+        }
+        else
+        {
+            autoStartToggleImage.sprite = autoStartToggleOffSprite;
+        }
+
+        if (isOn && currentWave > 1 && !isSpawning && totalEnemiesAlive <= 0)
+        {
+            StartCoroutine(StartAutoSpawn());
+        }
     }
 
     private void SetupWave(int wave)
@@ -215,22 +217,33 @@ public class ToggleDebugger : MonoBehaviour
         Instantiate(prefab, LevelManager.main.startPoint.position, Quaternion.identity);
         totalEnemiesAlive++;
     }
+    
+    private void EnemyDestroyed()
+    {
+        totalEnemiesAlive--;
+
+        if (enemiesToSpawn.Count == 0 && totalEnemiesAlive <= 0)
+        {
+            if (currentWave >= maxWaves)
+            {
+                LevelManager.main.Victory();
+            }
+            else
+            {
+                currentWave++;
+                Time.timeScale = 0f;
+            }
+        }
+    }
+
+    private void EndWave()
+    {
+        isSpawning = false;
+        UpdatePlayButtonSprite();
+    }
 
     private void UpdateWaveUI()
     {
         waveCounter.text = currentWave + "/" + maxWaves;
-    }
-
-    public void OnAutoStartToggleChanged(bool isOn)
-    {
-        if (isInitializingToggle) return;
-
-        PlayerPrefs.SetInt("AutoStartEnabled", isOn ? 1 : 0);
-        PlayerPrefs.Save();
-
-        if (isOn && currentWave > 1 && !isSpawning && totalEnemiesAlive <= 0)
-        {
-            StartCoroutine(StartAutoSpawn());
-        }
     }
 }
