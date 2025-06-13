@@ -168,6 +168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2197171355270804350}
   moveSpeed: 0.65
+  walkSprites:
+  - {fileID: 8821960324121075296, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
+  - {fileID: -8435811807259350778, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
+  - {fileID: -2499985178400976650, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
+  animationSpeed: 0.2
 --- !u!114 &9196784344883942911
 MonoBehaviour:
   m_ObjectHideFlags: 0
