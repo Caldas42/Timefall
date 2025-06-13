@@ -5369,6 +5369,8 @@ Transform:
   - {fileID: 1377225588}
   - {fileID: 1441346815}
   - {fileID: 652885130}
+  - {fileID: 353972195}
+  - {fileID: 1269382648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &313407005
@@ -5951,7 +5953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &366880602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6826,7 +6828,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 481697550}
   toggleTransition: 1
-  graphic: {fileID: 1294349088}
+  graphic: {fileID: 0}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -7223,8 +7225,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1294349090}
+  m_Children: []
   m_Father: {fileID: 435308484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -16102,11 +16103,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!4 &1043105830 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
-  m_PrefabInstance: {fileID: 514329465}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1050423698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
@@ -19217,6 +19213,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
   m_PrefabInstance: {fileID: 1266750936}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1269382648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1706402925576014221, guid: 95fb2b60443b6404baf38b4621136aca, type: 3}
+  m_PrefabInstance: {fileID: 2142303158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1272582338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19784,6 +19785,7 @@ RectTransform:
   - {fileID: 1340303843}
   - {fileID: 2120537037}
   - {fileID: 1294491351}
+  - {fileID: 435308484}
   m_Father: {fileID: 1595938874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -24505,7 +24507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1595938871
 MonoBehaviour:
   m_ObjectHideFlags: 0
