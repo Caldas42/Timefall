@@ -168,7 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2197171355270804350}
   moveSpeed: 1
-  walkSprites:
+  walkFrontSprites: []
+  walkBackSprites: []
+  walkSideSprites:
   - {fileID: -5249909553712078948, guid: 674929358cc04e947b16a7e93e92d43e, type: 3}
   - {fileID: -1419952202481923281, guid: 674929358cc04e947b16a7e93e92d43e, type: 3}
   - {fileID: 643806763949022488, guid: 674929358cc04e947b16a7e93e92d43e, type: 3}
