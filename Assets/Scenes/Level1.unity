@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeIndicator: {fileID: 0}
+  placementCheckRadius: 0.05
 --- !u!1001 &67132039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6624,6 +6624,9 @@ MonoBehaviour:
   maxWaves: 5
   waveCounter: {fileID: 752880931}
   autoStartToggle: {fileID: 1246234560}
+  startWaveButtonImage: {fileID: 842669458}
+  startWaveButtonOnSprite: {fileID: 402018904339468803, guid: 5fb3a3dc6fc0cd143abbf80f1968f36a, type: 3}
+  startWaveButtonOffSprite: {fileID: -1981187234446378409, guid: 5fb3a3dc6fc0cd143abbf80f1968f36a, type: 3}
 --- !u!114 &618250662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8277,7 +8280,7 @@ GameObject:
   - component: {fileID: 727469260}
   - component: {fileID: 727469259}
   m_Layer: 5
-  m_Name: SettingsButton
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8292,15 +8295,15 @@ RectTransform:
   m_GameObject: {fileID: 727469254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 204835102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 470}
-  m_SizeDelta: {x: 90, y: 90}
+  m_AnchoredPosition: {x: -850, y: 450}
+  m_SizeDelta: {x: 242, y: 226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727469256
 MonoBehaviour:
@@ -8332,7 +8335,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1091576658727547389, guid: 1da5730842f714d41b58303f92c81cfb, type: 3}
+    m_PressedSprite: {fileID: 1066734491050711320, guid: f0e5c44de2bff8748a18aeb4633e5110, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -8378,7 +8381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6673772886564257979, guid: 1da5730842f714d41b58303f92c81cfb, type: 3}
+  m_Sprite: {fileID: -7601575093878977132, guid: f0e5c44de2bff8748a18aeb4633e5110, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9476,7 +9479,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -10651,7 +10654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeIndicator: {fileID: 0}
+  placementCheckRadius: 0.05
 --- !u!1 &932498846
 GameObject:
   m_ObjectHideFlags: 0
@@ -18004,7 +18007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b803d8ab3162f2847915ddbad51fe835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeIndicator: {fileID: 0}
+  placementCheckRadius: 0.05
 --- !u!1001 &1587404014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20174,7 +20177,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

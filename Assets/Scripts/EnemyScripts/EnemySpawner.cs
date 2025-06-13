@@ -20,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI waveCounter;
     [SerializeField] private Toggle autoStartToggle;
+    [SerializeField] private Image startWaveButtonImage;
+    [SerializeField] private Sprite startWaveButtonOnSprite;
+    [SerializeField] private Sprite startWaveButtonOffSprite;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -92,7 +95,15 @@ public class ToggleDebugger : MonoBehaviour
             StartCoroutine(StartWave());
         }
 
-        if (!isSpawning) return;
+        if (!isSpawning)
+        {
+            startWaveButtonImage.sprite = startWaveButtonOnSprite;
+            return;
+        }
+        else
+        {
+            startWaveButtonImage.sprite = startWaveButtonOffSprite;
+        }
 
         timeSinceLastSpawn += Time.deltaTime;
 
