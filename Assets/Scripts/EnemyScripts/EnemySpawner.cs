@@ -41,27 +41,45 @@ public class EnemySpawner : MonoBehaviour
 private void Start()
 {
     if (LevelManager.main.GetRemainingLives() <= 0)
-        {
-            Time.timeScale = 0f;
-            LevelManager.main.getLevelController().OpenGameOverPanel();
-            return;
+    {
+        Time.timeScale = 0f;
+        LevelManager.main.getLevelController().OpenGameOverPanel();
+        return;
     }
+
     Time.timeScale = 0f;
 
-    bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
-
-    if (autoStartToggle != null)
+    if (autoStartToggle == null)
     {
-        autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
-        autoStartToggle.isOn = autoStartEnabled;
-        autoStartToggle.onValueChanged.AddListener(OnAutoStartToggleChanged);
+        GameObject toggleObj = GameObject.Find("AutoStartTogge2");
+        if (toggleObj != null)
+        {
+            autoStartToggle = toggleObj.GetComponent<Toggle>();
+        }
     }
 
-    Debug.Log("AutoStart carregado: " + autoStartEnabled);
+    autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
+    
+    bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
+    autoStartToggle.isOn = autoStartEnabled;
+
+    autoStartToggle.onValueChanged.AddListener(OnAutoStartToggleChanged);
+
 
     if (autoStartEnabled && currentWave > 1)
     {
         StartCoroutine(StartAutoSpawn());
+    }
+}
+
+public class ToggleDebugger : MonoBehaviour
+{
+    private Toggle toggle;
+
+    private void Awake()
+    {
+        toggle = GetComponent<Toggle>();
+        toggle.onValueChanged.AddListener((val) => Debug.Log($"Toggle changed to {val}"));
     }
 }
 
