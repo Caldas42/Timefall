@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a2f72e0ecd242e8408d7f47bd0706480
+guid: eb08b424edb7cc54a95488a1a32e28b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3098287674105066647
-    second: PanelSprite_0
+      213: 5766393351990959688
+    second: ConfirmButtons_0
+  - first:
+      213: -8234289061272659500
+    second: ConfirmButtons_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PanelSprite_0
+      name: ConfirmButtons_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 159
-        width: 1186
-        height: 610
+        x: 223
+        y: 623
+        width: 578
+        height: 290
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 83, y: 96, z: 84, w: 81}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96b0ffc96cba005d0800000000000000
-      internalID: -3098287674105066647
+      spriteID: 84e5894b338560050800000000000000
+      internalID: 5766393351990959688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConfirmButtons_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 143
+        width: 578
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d955f4d9bde9bd80800000000000000
+      internalID: -8234289061272659500
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 36191d4564da4084abeaf95bf9d6c291
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PanelSprite_0: -3098287674105066647
+      ConfirmButtons_0: 5766393351990959688
+      ConfirmButtons_1: -8234289061272659500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
