@@ -247,10 +247,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5810214309050244863}
-  - component: {fileID: 3251758551366568014}
   - component: {fileID: 5347407640063633305}
   - component: {fileID: 3453383207548248666}
   - component: {fileID: 4551098180774728853}
+  - component: {fileID: -3450076003991727563}
   m_Layer: 0
   m_Name: AreaTroop
   m_TagString: Untagged
@@ -275,28 +275,6 @@ Transform:
   - {fileID: 8923106434671719170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3251758551366568014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238912390334813594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: facaf10035402b24d9b81f5c6d32b8f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretRotationPoint: {fileID: 806466831470492260}
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 64
-  bulletPrefab: {fileID: 4975164937560609696, guid: f9f954e014cbb224b876369c241faf73, type: 3}
-  firingPoint: {fileID: 2567729281457404880}
-  rangeIndicator: {fileID: 4472057601329834158}
-  targetingRange: 4
-  rotationSpeed: 200
-  bps: 0.6
 --- !u!61 &5347407640063633305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -410,3 +388,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3450076003991727563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238912390334813594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36704449466a99143b0db87e72d4e579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretRotationPoint: {fileID: 806466831470492260}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletPrefab: {fileID: 4975164937560609696, guid: f9f954e014cbb224b876369c241faf73, type: 3}
+  firingPoint: {fileID: 2567729281457404880}
+  rangeIndicator: {fileID: 4472057601329834158}
+  targetingRange: 4
+  rotationSpeed: 200
+  bps: 0.6
+  turretSpriteRenderer: {fileID: 4551098180774728853}
+  normalSprite: {fileID: 4850800035062543515, guid: 6dcb7d83ca06be3488e6eeacf877937b, type: 3}
+  alertSprite: {fileID: 5232252311767906847, guid: 6dcb7d83ca06be3488e6eeacf877937b, type: 3}

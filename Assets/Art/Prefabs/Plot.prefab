@@ -133,7 +133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!114 &8323342645561043127
 MonoBehaviour:
@@ -149,6 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 3316242302855923256}
   hoverColor: {r: 0.3758277, g: 0.48575154, b: 0.509434, a: 1}
-  normalSprite: {fileID: 5499316896520331940, guid: 0b3d7f59ab82e2a4abd52daf5958a6f0, type: 3}
   highlightSprite: {fileID: 175913232246375465, guid: c0db86f3484c2ba44a41c934e626ac5e, type: 3}
   isPlaceable: 1

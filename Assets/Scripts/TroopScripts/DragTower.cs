@@ -7,7 +7,9 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private Tower towerData;
     private Camera cam;
 
-    [SerializeField] private GameObject rangeIndicator;
+    private SpriteRenderer previewSR;
+
+    [SerializeField] private float placementCheckRadius = 0.05f;
 
     private void Start()
     {
@@ -29,6 +31,11 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         previewTower.GetComponent<Turret>().SetPlaced(false);
         previewTower.GetComponent<Turret>().ShowRangeIndicator(true);
 
+        Collider2D col = previewTower.GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
+        previewSR = previewTower.GetComponent<SpriteRenderer>();
+
         SetPlotsHighlight(true);
     }
 
@@ -45,6 +52,14 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             turret.ShowRangeIndicator(true);
         }
+
+        Collider2D hit = Physics2D.OverlapCircle(worldPos, placementCheckRadius);
+        bool canPlace = hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable;
+
+        if (previewSR != null)
+        {
+            previewSR.color = canPlace ? Color.white : Color.red;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -52,7 +67,7 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (previewTower == null) return;
 
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D hit = Physics2D.OverlapPoint(mousePos);
+        Collider2D hit = Physics2D.OverlapCircle(mousePos, placementCheckRadius);
 
         if (hit != null && hit.TryGetComponent(out Plot plot) && plot.isPlaceable)
         {
@@ -88,5 +103,4 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             plot.SetHighlight(active);
         }
     }
-
 }
