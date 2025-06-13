@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: ea3fc49d7d73a174f84cbe47ae8da2ee
+guid: 3037d4099c3d4d34aa5c9f11ad369c1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6944231574071885604
-    second: Untitled 05-23-2025 09-52-40_0
+      213: 3557080989295510381
+    second: HomeButtonSprite_0
   - first:
-      213: -7035499426684316328
-    second: Untitled 05-23-2025 09-52-40_1
+      213: 4495004938892231262
+    second: HomeButtonSprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WeaponsButton
+      name: HomeButtonSprite_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 391
-        width: 162
-        height: 162
+        x: 31
+        y: 0
+        width: 242
+        height: 257
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42f3b9213ddde5060800000000000000
-      internalID: 6944231574071885604
+      spriteID: d630144405a4d5130800000000000000
+      internalID: 3557080989295510381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProfileButtonPressed
+      name: HomeButtonSprite_1
       rect:
         serializedVersion: 2
-        x: 543
-        y: 391
-        width: 162
-        height: 162
+        x: 303
+        y: 0
+        width: 242
+        height: 241
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 855540f0c82ec5e90800000000000000
-      internalID: -7035499426684316328
+      spriteID: e524c462d27716e30800000000000000
+      internalID: 4495004938892231262
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: db21e5a227e8f9e4e86e77f2004f0ba2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ProfileButtonPressed: -7035499426684316328
-      WeaponsButton: 6944231574071885604
+      HomeButtonSprite_0: 3557080989295510381
+      HomeButtonSprite_1: 4495004938892231262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

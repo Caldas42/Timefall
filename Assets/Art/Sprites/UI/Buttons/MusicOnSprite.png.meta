@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d309906b1828eb4419312d2803d1e997
+guid: dcebcbbd3b0b72a4db70ede8464634b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2970073484504309273
-    second: BackButton_0
-  - first:
-      213: 2859090124196206043
-    second: BackButton_1
+      213: -4197170639797387303
+    second: MusicOnSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackButton_0
+      name: MusicOnSprite_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 695
-        width: 162
-        height: 162
+        x: 15
+        y: 15
+        width: 194
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e16057e6ed28c6d0800000000000000
-      internalID: -2970073484504309273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackButton_1
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 703
-        width: 162
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd5da81e1578da720800000000000000
-      internalID: 2859090124196206043
+      spriteID: 9df7d296a87a0c5c0800000000000000
+      internalID: -4197170639797387303
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackButton_0: -2970073484504309273
-      BackButton_1: 2859090124196206043
+      MusicOnSprite_0: -4197170639797387303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
