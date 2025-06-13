@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4981c1e8302306a4396e636f50421172
+guid: b2e97c2d4896b674eb8a2ac10a37b275
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -132554265128497894
-    second: EmptyButtonSprite_0
+      213: -7622781048977943800
+    second: Jogar2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmptyButtonSprite_0
+      name: Jogar2_0
       rect:
         serializedVersion: 2
         x: 15
-        y: 367
+        y: 0
         width: 994
-        height: 290
+        height: 545
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1d8d812992192ef0800000000000000
-      internalID: -132554265128497894
+      spriteID: 803171fe501763690800000000000000
+      internalID: -7622781048977943800
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EmptyButtonSprite_0: -132554265128497894
+      Jogar2_0: -7622781048977943800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
