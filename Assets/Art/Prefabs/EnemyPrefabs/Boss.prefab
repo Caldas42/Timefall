@@ -168,7 +168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2197171355270804350}
   moveSpeed: 0.65
-  walkSprites:
+  walkFrontSprites:
+  - {fileID: 4314482411618006797, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
+  walkBackSprites:
+  - {fileID: -5248641430620404906, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
+  walkSideSprites:
   - {fileID: 8821960324121075296, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
   - {fileID: -8435811807259350778, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
   - {fileID: -2499985178400976650, guid: 656780a4e0f86ae4c973bacb337ab23c, type: 3}
