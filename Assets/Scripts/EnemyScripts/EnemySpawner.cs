@@ -40,6 +40,12 @@ public class EnemySpawner : MonoBehaviour
 
 private void Start()
 {
+    if (LevelManager.main.GetRemainingLives() <= 0)
+        {
+            Time.timeScale = 0f;
+            LevelManager.main.getLevelController().OpenGameOverPanel();
+            return;
+    }
     Time.timeScale = 0f;
 
     bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
