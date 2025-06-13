@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b4b2b497b6c6448b1da574e05d8487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverCursor: {fileID: 2800000, guid: a25743669b58ab34c894874e7cbaa19d, type: 3}
-  clickCursor: {fileID: 2800000, guid: a25743669b58ab34c894874e7cbaa19d, type: 3}
+  hoverCursor: {fileID: 2800000, guid: 6e5bca4a208964641b5f9cafc54f76db, type: 3}
+  clickCursor: {fileID: 2800000, guid: 6e5bca4a208964641b5f9cafc54f76db, type: 3}
   hotspot: {x: 0, y: 0}
 --- !u!1 &500884808
 GameObject:
