@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7546f1d68acba064db8ad916dcc09e80
+guid: e7a7fd0cb6d1536498626d7d7d456581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8633812608642945616
-    second: MenuHamburguer_0
-  - first:
-      213: 7215391604289691443
-    second: MenuHamburguer_1
+      213: 8538016535210637639
+    second: estrela3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MenuHamburguer_0
+      name: estrela3_0
       rect:
         serializedVersion: 2
-        x: 263
-        y: 335
-        width: 162
-        height: 162
+        x: 15
+        y: 15
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 052937bd2d671d770800000000000000
-      internalID: 8633812608642945616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MenuHamburguer_1
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 335
-        width: 162
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33fd5017f68322460800000000000000
-      internalID: 7215391604289691443
+      spriteID: 74934ab6dc02d7670800000000000000
+      internalID: 8538016535210637639
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MenuHamburguer_0: 8633812608642945616
-      MenuHamburguer_1: 7215391604289691443
+      estrela3_0: 8538016535210637639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
