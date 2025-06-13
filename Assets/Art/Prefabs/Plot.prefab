@@ -149,4 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 3316242302855923256}
   hoverColor: {r: 0.3758277, g: 0.48575154, b: 0.509434, a: 1}
+  normalSprite: {fileID: 5499316896520331940, guid: 0b3d7f59ab82e2a4abd52daf5958a6f0, type: 3}
+  highlightSprite: {fileID: 175913232246375465, guid: c0db86f3484c2ba44a41c934e626ac5e, type: 3}
   isPlaceable: 1
