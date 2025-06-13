@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9d092dc4334d1804e9461620f6cabe32
+guid: 7854fcdbf3720c14bbea4efc9de22605
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5930167073087356591
-    second: SINERGIA_0
+      213: -1411581423539221497
+    second: SelectBoxBackgroundSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SINERGIA_0
+      name: SelectBoxBackgroundSprite_0
       rect:
         serializedVersion: 2
-        x: 860
-        y: 539
-        width: 200
-        height: 66
+        x: 0
+        y: 0
+        width: 400
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 32, z: 31, w: 32}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15109e56770d3bda0800000000000000
-      internalID: -5930167073087356591
+      spriteID: 70c87669c2e096ce0800000000000000
+      internalID: -1411581423539221497
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 664b28b090c659d4a9f1183376cc2d64
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SINERGIA_0: -5930167073087356591
+      SelectBoxBackgroundSprite_0: -1411581423539221497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

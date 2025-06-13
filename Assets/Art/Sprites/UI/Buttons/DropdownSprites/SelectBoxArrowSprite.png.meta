@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 6f8e8eebb836c7a4c80b7a213e0205ac
+guid: 595bc0672249aa14597f3ce0ffc19675
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4153354448673283932
-    second: Fogo_0
-  - first:
-      213: -9191506074042369670
-    second: Fogo_1
-  - first:
-      213: 3531441908022598811
-    second: Fogo_2
+      213: 1946976914830185749
+    second: SelectBoxArrowSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -106,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fogo_0
+      name: SelectBoxArrowSprite_0
       rect:
         serializedVersion: 2
-        x: 263
-        y: 655
-        width: 98
+        x: 0
+        y: 15
+        width: 160
         height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5f957b9ddda3a930800000000000000
-      internalID: 4153354448673283932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fogo_1
-      rect:
-        serializedVersion: 2
-        x: 535
-        y: 471
-        width: 226
-        height: 178
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a79fbd1ace5317080800000000000000
-      internalID: -9191506074042369670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fogo_2
-      rect:
-        serializedVersion: 2
-        x: 519
-        y: 207
-        width: 154
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9c5d9874b3320130800000000000000
-      internalID: 3531441908022598811
+      spriteID: 515d652403d050b10800000000000000
+      internalID: 1946976914830185749
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fogo_0: 4153354448673283932
-      Fogo_1: -9191506074042369670
-      Fogo_2: 3531441908022598811
+      SelectBoxArrowSprite_0: 1946976914830185749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
