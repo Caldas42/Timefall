@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ea3fc49d7d73a174f84cbe47ae8da2ee
+guid: a2f72e0ecd242e8408d7f47bd0706480
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6944231574071885604
-    second: Untitled 05-23-2025 09-52-40_0
-  - first:
-      213: -7035499426684316328
-    second: Untitled 05-23-2025 09-52-40_1
+      213: -3098287674105066647
+    second: PanelSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WeaponsButton
+      name: PanelSprite_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 391
-        width: 162
-        height: 162
+        x: 47
+        y: 159
+        width: 1186
+        height: 610
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42f3b9213ddde5060800000000000000
-      internalID: 6944231574071885604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProfileButtonPressed
-      rect:
-        serializedVersion: 2
-        x: 543
-        y: 391
-        width: 162
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 855540f0c82ec5e90800000000000000
-      internalID: -7035499426684316328
+      spriteID: 96b0ffc96cba005d0800000000000000
+      internalID: -3098287674105066647
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: db21e5a227e8f9e4e86e77f2004f0ba2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ProfileButtonPressed: -7035499426684316328
-      WeaponsButton: 6944231574071885604
+      PanelSprite_0: -3098287674105066647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

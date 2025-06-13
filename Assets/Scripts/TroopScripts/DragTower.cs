@@ -28,6 +28,8 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         previewTower.GetComponent<Turret>().SetCanShoot(false);
         previewTower.GetComponent<Turret>().SetPlaced(false);
         previewTower.GetComponent<Turret>().ShowRangeIndicator(true);
+
+        SetPlotsHighlight(true);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -74,5 +76,17 @@ public class DragTower : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         Destroy(previewTower);
         previewTower = null;
+
+        SetPlotsHighlight(false);
     }
+
+    private void SetPlotsHighlight(bool active)
+    {
+        Plot[] plots = FindObjectsByType<Plot>(FindObjectsSortMode.None);
+        foreach (var plot in plots)
+        {
+            plot.SetHighlight(active);
+        }
+    }
+
 }

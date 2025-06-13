@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 50c22d51adb4742458c9629205cb1b31
+guid: 9999c62534aa26d459eedea7a6ba4c9d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2104800674364406454
-    second: Fundo tela inicial_0
+      213: -5665576378681252369
+    second: ReviewMapSprite_0
+  - first:
+      213: 5226399930007690249
+    second: ReviewMapSprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fundo tela inicial_0
+      name: ReviewMapSprite_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 31
         y: 0
-        width: 1920
-        height: 1088
+        width: 242
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba3e76cf01c53d10800000000000000
-      internalID: 2104800674364406454
+      spriteID: fe52cd41d44df51b0800000000000000
+      internalID: -5665576378681252369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReviewMapSprite_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 242
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c1c32bb07e78840800000000000000
+      internalID: 5226399930007690249
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fundo tela inicial_0: 2104800674364406454
+      ReviewMapSprite_0: -5665576378681252369
+      ReviewMapSprite_1: 5226399930007690249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

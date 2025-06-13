@@ -7,6 +7,9 @@ public class MusicAndSFXManager : MonoBehaviour
     [SerializeField] private AudioSource Music;
     [SerializeField] private Slider volumeSliderMusic;
     [SerializeField] private TMP_Text musicVolumePercentage;
+    [SerializeField] private Image musicToggleButtonImage;
+    [SerializeField] private Sprite musicOnSprite;
+    [SerializeField] private Sprite musicOffSprite;
 
     private bool ButtonState = true;
     private float lastVolume;
@@ -36,6 +39,7 @@ public class MusicAndSFXManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("MusicVolume", lastVolume);
             volumeSliderMusic.value = PlayerPrefs.GetFloat("MusicVolume");
+            musicToggleButtonImage.sprite = musicOnSprite;
             AudioListener.volume = volumeSliderMusic.value;
             musicVolumePercentage.text = Mathf.RoundToInt(volumeSliderMusic.value * 100) + "%";
         }
@@ -44,6 +48,7 @@ public class MusicAndSFXManager : MonoBehaviour
             lastVolume = PlayerPrefs.GetFloat("MusicVolume");
             volumeSliderMusic.value = 0;
             AudioListener.volume = 0;
+            musicToggleButtonImage.sprite = musicOffSprite;
             musicVolumePercentage.text = "0%";
         }
     }

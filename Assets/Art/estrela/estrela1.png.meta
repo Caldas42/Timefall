@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d309906b1828eb4419312d2803d1e997
+guid: 77ca7660e8b24084a861f65b98231158
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2970073484504309273
-    second: BackButton_0
-  - first:
-      213: 2859090124196206043
-    second: BackButton_1
+      213: -3692993804829708136
+    second: estrela1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackButton_0
+      name: estrela1_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 695
-        width: 162
-        height: 162
+        x: 47
+        y: 47
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e16057e6ed28c6d0800000000000000
-      internalID: -2970073484504309273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackButton_1
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 703
-        width: 162
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd5da81e1578da720800000000000000
-      internalID: 2859090124196206043
+      spriteID: 890386963b9dfbcc0800000000000000
+      internalID: -3692993804829708136
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackButton_0: -2970073484504309273
-      BackButton_1: 2859090124196206043
+      estrela1_0: -3692993804829708136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

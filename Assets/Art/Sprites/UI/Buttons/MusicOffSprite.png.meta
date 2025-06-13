@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 50c22d51adb4742458c9629205cb1b31
+guid: 4cba28be6af731e45b117535ddab87b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2104800674364406454
-    second: Fundo tela inicial_0
+      213: -8643302855621672796
+    second: MusicOffSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fundo tela inicial_0
+      name: MusicOffSprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1088
+        x: 15
+        y: 15
+        width: 209
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba3e76cf01c53d10800000000000000
-      internalID: 2104800674364406454
+      spriteID: 4a00d84d8d1dc0880800000000000000
+      internalID: -8643302855621672796
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fundo tela inicial_0: 2104800674364406454
+      MusicOffSprite_0: -8643302855621672796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

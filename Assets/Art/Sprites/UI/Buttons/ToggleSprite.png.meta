@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 50c22d51adb4742458c9629205cb1b31
+guid: 8943b408f47efb4439c47636b705fb53
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2104800674364406454
-    second: Fundo tela inicial_0
+      213: -1511704486235796004
+    second: ToggleSprite_0
+  - first:
+      213: -2360175094261715439
+    second: ToggleSprite_1
+  - first:
+      213: 8524754360351392818
+    second: ToggleSprite_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fundo tela inicial_0
+      name: ToggleSprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1920
-        height: 1088
+        y: 239
+        width: 160
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba3e76cf01c53d10800000000000000
-      internalID: 2104800674364406454
+      spriteID: cdd0d8477c8550be0800000000000000
+      internalID: -1511704486235796004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToggleSprite_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 160
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e6ecaa149fe3fd0800000000000000
+      internalID: -2360175094261715439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToggleSprite_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2340536bce20e4670800000000000000
+      internalID: 8524754360351392818
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fundo tela inicial_0: 2104800674364406454
+      ToggleSprite_0: -1511704486235796004
+      ToggleSprite_1: -2360175094261715439
+      ToggleSprite_2: 8524754360351392818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
