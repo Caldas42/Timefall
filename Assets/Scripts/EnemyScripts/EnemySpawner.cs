@@ -20,6 +20,9 @@ public class EnemySpawner : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI waveCounter;
     [SerializeField] private Toggle autoStartToggle;
+    [SerializeField] private Image startWaveButtonImage;
+    [SerializeField] private Sprite startWaveButtonOnSprite;
+    [SerializeField] private Sprite startWaveButtonOffSprite;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
@@ -48,15 +51,6 @@ private void Start()
     }
 
     Time.timeScale = 0f;
-
-    if (autoStartToggle == null)
-    {
-        GameObject toggleObj = GameObject.Find("AutoStartTogge2");
-        if (toggleObj != null)
-        {
-            autoStartToggle = toggleObj.GetComponent<Toggle>();
-        }
-    }
 
     autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
     
@@ -101,7 +95,15 @@ public class ToggleDebugger : MonoBehaviour
             StartCoroutine(StartWave());
         }
 
-        if (!isSpawning) return;
+        if (!isSpawning)
+        {
+            startWaveButtonImage.sprite = startWaveButtonOnSprite;
+            return;
+        }
+        else
+        {
+            startWaveButtonImage.sprite = startWaveButtonOffSprite;
+        }
 
         timeSinceLastSpawn += Time.deltaTime;
 
@@ -223,10 +225,8 @@ public class ToggleDebugger : MonoBehaviour
     {
         if (isInitializingToggle) return;
 
-        Debug.Log("Toggle mudou para: " + isOn);
         PlayerPrefs.SetInt("AutoStartEnabled", isOn ? 1 : 0);
         PlayerPrefs.Save();
-        Debug.Log("PlayerPrefs salvo: AutoStartEnabled = " + PlayerPrefs.GetInt("AutoStartEnabled", 0));
 
         if (isOn && currentWave > 1 && !isSpawning && totalEnemiesAlive <= 0)
         {
