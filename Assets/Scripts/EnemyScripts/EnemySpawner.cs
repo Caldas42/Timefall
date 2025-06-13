@@ -49,15 +49,6 @@ private void Start()
 
     Time.timeScale = 0f;
 
-    if (autoStartToggle == null)
-    {
-        GameObject toggleObj = GameObject.Find("AutoStartTogge2");
-        if (toggleObj != null)
-        {
-            autoStartToggle = toggleObj.GetComponent<Toggle>();
-        }
-    }
-
     autoStartToggle.onValueChanged.RemoveListener(OnAutoStartToggleChanged);
     
     bool autoStartEnabled = PlayerPrefs.GetInt("AutoStartEnabled", 0) == 1;
@@ -223,10 +214,8 @@ public class ToggleDebugger : MonoBehaviour
     {
         if (isInitializingToggle) return;
 
-        Debug.Log("Toggle mudou para: " + isOn);
         PlayerPrefs.SetInt("AutoStartEnabled", isOn ? 1 : 0);
         PlayerPrefs.Save();
-        Debug.Log("PlayerPrefs salvo: AutoStartEnabled = " + PlayerPrefs.GetInt("AutoStartEnabled", 0));
 
         if (isOn && currentWave > 1 && !isSpawning && totalEnemiesAlive <= 0)
         {

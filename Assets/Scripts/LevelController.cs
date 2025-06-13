@@ -2,13 +2,16 @@ using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI remainingLivesText;
     [SerializeField] private TextMeshProUGUI currencyText;
-    [SerializeField] private TextMeshProUGUI speedText;
+    [SerializeField] private Image gameSpeedImage;
+    [SerializeField] private Sprite gameSpeedOffSprite;
+    [SerializeField] private Sprite gameSpeedOnSprite;
 
     [Header("Panels")]
     [SerializeField] private GameObject settingsPanel;
@@ -53,7 +56,7 @@ void OnGUI()
 
         PlayerPrefs.SetFloat("GameSpeed", Time.timeScale);
         PlayerPrefs.Save();
-        speedText.text = Time.timeScale == 1f ? "2X" : "1X";
+        gameSpeedImage.sprite = Time.timeScale == 1f ? gameSpeedOnSprite : gameSpeedOffSprite;
     }
 
     public void CallScene(String scene)
